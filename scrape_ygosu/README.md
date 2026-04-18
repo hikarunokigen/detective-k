@@ -57,6 +57,7 @@ interface Post {
   title: string;
   url: string;
   listing_date: string;
+  listing_datetime: string;
   views: number;
   recommend: number;
   comment_count: number;

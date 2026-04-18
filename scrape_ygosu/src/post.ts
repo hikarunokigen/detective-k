@@ -9,8 +9,8 @@ import { chromium, type BrowserContext, type Page } from "playwright";
 const MEMBER_ID = "684134";
 
 const CONCURRENCY = 3;
-const MIN_JITTER_MS = 600;
-const MAX_JITTER_MS = 1800;
+const MIN_JITTER_MS = 700;
+const MAX_JITTER_MS = 2000;
 
 const PAGE_COOLDOWN_MIN_MS = 2000;
 const PAGE_COOLDOWN_MAX_MS = 4000;
@@ -42,6 +42,7 @@ interface Post {
   title: string;
   url: string;
   listing_date: string;
+  listing_datetime: string;
   views: number;
   recommend: number;
   comment_count: number;
@@ -121,12 +122,23 @@ async function scrapeListing(page: Page, pageNum: number): Promise<PostSummary[]
 async function scrapePostDetail(
   page: Page,
   url: string,
-): Promise<{ post_body: string; good_vote: number; bad_vote: number; comments: Comment[] }> {
+): Promise<{
+  post_body: string;
+  listing_datetime: string;
+  good_vote: number;
+  bad_vote: number;
+  comments: Comment[];
+}> {
   console.log(`[detail] ${url}`);
   await page.goto(url, { waitUntil: "domcontentloaded" });
 
   const body = page.locator(".board_body .container").first();
   const postBody = (await body.count()) > 0 ? ((await body.innerText()) ?? "").trim() : "";
+
+  // `.right_etc div.date` text looks like "2026-04-14 21:49:21 (4일 전) / ".
+  const dateLoc = page.locator(".right_etc div.date").first();
+  const dateText = (await dateLoc.count()) > 0 ? ((await dateLoc.textContent()) ?? "") : "";
+  const listing_datetime = dateText.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/)?.[0] ?? "";
 
   // Post-level vote element ids are `board_<board>_<postId>_{good,bad}`.
   // Suffixing on `_<postId>_{good|bad}` keeps us off of comment vote nodes,
@@ -165,8 +177,7 @@ async function scrapePostDetail(
         : "";
     const voteGood =
       (await goodLoc.count()) > 0 ? parseInt10((await goodLoc.textContent()) ?? "") : 0;
-    const voteBad =
-      (await badLoc.count()) > 0 ? parseInt10((await badLoc.textContent()) ?? "") : 0;
+    const voteBad = (await badLoc.count()) > 0 ? parseInt10((await badLoc.textContent()) ?? "") : 0;
 
     comments.push({
       user_id: userId,
@@ -177,7 +188,7 @@ async function scrapePostDetail(
     });
   }
 
-  return { post_body: postBody, good_vote, bad_vote, comments };
+  return { post_body: postBody, listing_datetime, good_vote, bad_vote, comments };
 }
 
 /**
@@ -258,8 +269,7 @@ async function main() {
       console.log(`[write] ${posts.length} posts → ${outPath}`);
 
       const cool =
-        PAGE_COOLDOWN_MIN_MS +
-        Math.random() * (PAGE_COOLDOWN_MAX_MS - PAGE_COOLDOWN_MIN_MS);
+        PAGE_COOLDOWN_MIN_MS + Math.random() * (PAGE_COOLDOWN_MAX_MS - PAGE_COOLDOWN_MIN_MS);
       await sleep(cool);
     }
   } finally {
