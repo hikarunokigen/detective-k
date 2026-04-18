@@ -47,8 +47,12 @@ async function inspect(page: Page, label: string): Promise<void> {
 
   for (let i = 0; i < primaryCount; i++) {
     const item = primary.nth(i);
-    const nick = ((await item.locator("div.nick").first().textContent()) ?? "").trim();
-    const body = ((await item.locator("div.body_wrap").first().innerText()) ?? "").trim();
+    const nickLoc = item.locator("div.nick").first();
+    const bodyLoc = item.locator("div.body_wrap").first();
+    const nick =
+      (await nickLoc.count()) > 0 ? ((await nickLoc.textContent()) ?? "").trim() : "(no .nick)";
+    const body =
+      (await bodyLoc.count()) > 0 ? ((await bodyLoc.innerText()) ?? "").trim() : "(no .body_wrap)";
     console.log(`  [${i}] nick: ${JSON.stringify(nick)}`);
     console.log(`  [${i}] body: ${JSON.stringify(body)}`);
   }

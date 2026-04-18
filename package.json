@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "pnpm@10.33.0",
   "scripts": {
-    "start": "pnpm --filter scrape_ygosu start",
+    "scrape": "pnpm --filter scrape_ygosu start",
     "dev:website": "pnpm --filter website dev",
     "dev:scraper": "pnpm --filter scrape_ygosu dev",
     "build": "pnpm -r build",

@@ -1,4 +1,9 @@
-import { writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
+const DATA_DIR = join(REPO_ROOT, "data");
 import { chromium, type BrowserContext, type Page } from "playwright";
 
 const MEMBER_ID = "684134";
@@ -104,8 +109,12 @@ async function scrapePostDetail(
   const comments: Comment[] = [];
   for (let i = 0; i < n; i++) {
     const item = commentItems.nth(i);
-    const nickname = ((await item.locator("div.nick").first().textContent()) ?? "").trim();
-    const commentBody = ((await item.locator("div.body_wrap").first().innerText()) ?? "").trim();
+    const nickLoc = item.locator("div.nick").first();
+    const bodyLoc = item.locator("div.body_wrap").first();
+    const nickname =
+      (await nickLoc.count()) > 0 ? ((await nickLoc.textContent()) ?? "").trim() : "";
+    const commentBody =
+      (await bodyLoc.count()) > 0 ? ((await bodyLoc.innerText()) ?? "").trim() : "";
     comments.push({ nickname, commentBody });
   }
 
@@ -171,9 +180,15 @@ async function main() {
 
   try {
     const posts = await scrapePage(context, PAGE_NUM);
-    const filename = `ygosu_${MEMBER_ID}_${PAGE_NUM}.json`;
-    await writeFile(filename, JSON.stringify(posts, null, 2), "utf8");
-    console.log(`[write] ${posts.length} posts → ${filename}`);
+    const now = new Date();
+    const yy = String(now.getFullYear()).slice(-2);
+    const mm = String(now.getMonth() + 1).padStart(2, "0");
+    const dd = String(now.getDate()).padStart(2, "0");
+    const filename = `ygosu__user_${MEMBER_ID}__${PAGE_NUM}__${yy}_${mm}_${dd}.json`;
+    await mkdir(DATA_DIR, { recursive: true });
+    const outPath = join(DATA_DIR, filename);
+    await writeFile(outPath, JSON.stringify(posts, null, 2), "utf8");
+    console.log(`[write] ${posts.length} posts → ${outPath}`);
   } finally {
     await context.close();
     await browser.close();
