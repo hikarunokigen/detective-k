@@ -42,41 +42,44 @@ function extractCommentId(url: string): string {
 
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
-async function readLastPage(page: Page): Promise<number | null> {
-  const lastEl = page.locator("b.last").first();
-  if ((await lastEl.count()) === 0) return null;
-
-  const text = ((await lastEl.textContent()) ?? "").trim();
-  const textNum = text.match(/\d+/)?.[0];
-  if (textNum) return Number(textNum);
-
-  const anchor = page.locator("a:has(b.last)").first();
-  if ((await anchor.count()) === 0) return null;
-  const href = (await anchor.getAttribute("href")) ?? "";
-  const onclick = (await anchor.getAttribute("onclick")) ?? "";
-  const fromHref = href.match(/[?&]page=(\d+)/)?.[1];
-  if (fromHref) return Number(fromHref);
-  const fromOnclick = onclick.match(/(\d+)/)?.[1];
-  return fromOnclick ? Number(fromOnclick) : null;
+async function readTotalCount(page: Page): Promise<number | null> {
+  // The pagination strip's `b.last` only advances one window at a time
+  // (e.g. stops at 10 even when 11+ pages exist), so we derive the real
+  // last page from the total count advertised on the profile header.
+  const loc = page.locator(".det_myboard > h3:nth-child(1) > i:nth-child(3)").first();
+  if ((await loc.count()) === 0) return null;
+  const text = ((await loc.textContent()) ?? "").replace(/,/g, "");
+  const m = text.match(/\d+/);
+  return m ? Number(m[0]) : null;
 }
 
 async function scrapeCommentListing(
   page: Page,
   pageNum: number,
+  knownLastPage: number | null,
 ): Promise<{ comments: Comment[]; lastPage: number | null }> {
   const url = LISTING_URL(pageNum);
   console.log(`[listing] ${url}`);
   await page.goto(url, { waitUntil: "domcontentloaded" });
 
-  const lastPage = await readLastPage(page);
-  if (lastPage !== null && pageNum > lastPage) {
-    console.log(`[listing] page ${pageNum} > last page ${lastPage} — skipping`);
-    return { comments: [], lastPage };
+  if (knownLastPage !== null && pageNum > knownLastPage) {
+    console.log(`[listing] page ${pageNum} > last page ${knownLastPage} — skipping`);
+    return { comments: [], lastPage: knownLastPage };
   }
 
   const boxes = page.locator("div.mrbox");
   const count = await boxes.count();
   console.log(`[listing] ${count} comment boxes matched`);
+
+  // Derive last page from total count on the first page only; carry forward.
+  let lastPage = knownLastPage;
+  if (lastPage === null && pageNum === 1 && count > 0) {
+    const total = await readTotalCount(page);
+    if (total !== null) {
+      lastPage = Math.ceil(total / count);
+      console.log(`[listing] total=${total}, per_page=${count}, last_page=${lastPage}`);
+    }
+  }
 
   const comments: Comment[] = [];
   for (let i = 0; i < count; i++) {
@@ -153,8 +156,11 @@ async function main() {
     ].join("_");
     await mkdir(DATA_DIR, { recursive: true });
 
+    let lastPage: number | null = null;
     for (let pageNum = 1; ; pageNum++) {
-      const { comments, lastPage } = await scrapeCommentListing(page, pageNum);
+      const result = await scrapeCommentListing(page, pageNum, lastPage);
+      if (result.lastPage !== null) lastPage = result.lastPage;
+      const { comments } = result;
       if (comments.length === 0) {
         console.log(`[done] page ${pageNum} returned 0 comments — stopping`);
         break;
