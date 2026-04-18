@@ -19,26 +19,33 @@ const LISTING_URL = (page: number) =>
   `https://ygosu.com/minilog/?m2=article&m3=list&member=${MEMBER_ID}&search=&searcht=s&page=${page}`;
 
 interface Comment {
-  userId: string;
+  user_id: string;
   nickname: string;
-  commentBody: string;
-  voteGood: number;
-  voteBad: number;
+  comment_body: string;
+  vote_good: number;
+  vote_bad: number;
 }
 
 interface PostSummary {
   category: string;
   title: string;
   url: string;
-  listingDate: string;
+  listing_date: string;
   views: number;
   recommend: number;
-  commentCount: number;
+  comment_count: number;
 }
 
-interface Post extends PostSummary {
-  postId: string;
-  postBody: string;
+interface Post {
+  post_id: string;
+  category: string;
+  title: string;
+  url: string;
+  listing_date: string;
+  views: number;
+  recommend: number;
+  comment_count: number;
+  post_body: string;
   good_vote: number;
   bad_vote: number;
   comments: Comment[];
@@ -101,10 +108,10 @@ async function scrapeListing(page: Page, pageNum: number): Promise<PostSummary[]
       category,
       title,
       url: absolutize(href),
-      listingDate,
+      listing_date: listingDate,
       views: parseInt10(viewsText),
       recommend: parseInt10(recommendText),
-      commentCount,
+      comment_count: commentCount,
     });
   }
 
@@ -114,7 +121,7 @@ async function scrapeListing(page: Page, pageNum: number): Promise<PostSummary[]
 async function scrapePostDetail(
   page: Page,
   url: string,
-): Promise<{ postBody: string; good_vote: number; bad_vote: number; comments: Comment[] }> {
+): Promise<{ post_body: string; good_vote: number; bad_vote: number; comments: Comment[] }> {
   console.log(`[detail] ${url}`);
   await page.goto(url, { waitUntil: "domcontentloaded" });
 
@@ -161,10 +168,16 @@ async function scrapePostDetail(
     const voteBad =
       (await badLoc.count()) > 0 ? parseInt10((await badLoc.textContent()) ?? "") : 0;
 
-    comments.push({ userId, nickname, commentBody, voteGood, voteBad });
+    comments.push({
+      user_id: userId,
+      nickname,
+      comment_body: commentBody,
+      vote_good: voteGood,
+      vote_bad: voteBad,
+    });
   }
 
-  return { postBody, good_vote, bad_vote, comments };
+  return { post_body: postBody, good_vote, bad_vote, comments };
 }
 
 /**
@@ -208,7 +221,7 @@ async function scrapePage(context: BrowserContext, pageNum: number): Promise<Pos
     const workers = detailPages.map((page) => async (s: PostSummary) => {
       await sleep(jitterMs());
       const detail = await scrapePostDetail(page, s.url);
-      return { postId: extractPostId(s.url), ...s, ...detail } satisfies Post;
+      return { post_id: extractPostId(s.url), ...s, ...detail } satisfies Post;
     });
     return await mapWithWorkers(summaries, workers);
   } finally {

@@ -52,23 +52,23 @@ For each page in the table, there is a list of posts. In order to retreive the b
 
 ```typescript
 interface Post {
-  postId: string;
+  post_id: string;
   category: string;
   title: string;
   url: string;
-  listingDate: string;
+  listing_date: string;
   views: number;
   recommend: number;
-  commentCount: number;
-  postBody: string;
+  comment_count: number;
+  post_body: string;
   good_vote: number;
   bad_vote: number;
   comments: {
-    userId: string;
+    user_id: string;
     nickname: string;
-    commentBody: string;
-    voteGood: number;
-    voteBad: number;
+    comment_body: string;
+    vote_good: number;
+    vote_bad: number;
   }[];
 }
 ```
