@@ -7,18 +7,23 @@ const DATA_DIR = join(REPO_ROOT, "data");
 import { chromium, type BrowserContext, type Page } from "playwright";
 
 const MEMBER_ID = "684134";
-const PAGE_NUM = 1;
 
 const CONCURRENCY = 3;
 const MIN_JITTER_MS = 600;
 const MAX_JITTER_MS = 1800;
 
+const PAGE_COOLDOWN_MIN_MS = 2000;
+const PAGE_COOLDOWN_MAX_MS = 4000;
+
 const LISTING_URL = (page: number) =>
   `https://ygosu.com/minilog/?m2=article&m3=list&member=${MEMBER_ID}&search=&searcht=s&page=${page}`;
 
 interface Comment {
+  userId: string;
   nickname: string;
   commentBody: string;
+  voteGood: number;
+  voteBad: number;
 }
 
 interface PostSummary {
@@ -32,8 +37,20 @@ interface PostSummary {
 }
 
 interface Post extends PostSummary {
+  postId: string;
   postBody: string;
+  good_vote: number;
+  bad_vote: number;
   comments: Comment[];
+}
+
+function extractPostId(url: string): string {
+  return url.match(/\/(\d+)(?:[?#/]|$)/)?.[1] ?? "";
+}
+
+function extractUserId(onclick: string): string {
+  // show_nick_dropdown($(this), 0, 666527, 'N', '')  →  "666527"
+  return onclick.match(/show_nick_dropdown\([^,]+,\s*\d+\s*,\s*(\d+)/)?.[1] ?? "";
 }
 
 function absolutize(href: string): string {
@@ -97,12 +114,27 @@ async function scrapeListing(page: Page, pageNum: number): Promise<PostSummary[]
 async function scrapePostDetail(
   page: Page,
   url: string,
-): Promise<{ postBody: string; comments: Comment[] }> {
+): Promise<{ postBody: string; good_vote: number; bad_vote: number; comments: Comment[] }> {
   console.log(`[detail] ${url}`);
   await page.goto(url, { waitUntil: "domcontentloaded" });
 
   const body = page.locator(".board_body .container").first();
   const postBody = (await body.count()) > 0 ? ((await body.innerText()) ?? "").trim() : "";
+
+  // Post-level vote element ids are `board_<board>_<postId>_{good,bad}`.
+  // Suffixing on `_<postId>_{good|bad}` keeps us off of comment vote nodes,
+  // which end in a different numeric segment (the comment id).
+  const postId = extractPostId(url);
+  const postGoodLoc = postId ? page.locator(`[id$="_${postId}_good"]`).first() : null;
+  const postBadLoc = postId ? page.locator(`[id$="_${postId}_bad"]`).first() : null;
+  const good_vote =
+    postGoodLoc && (await postGoodLoc.count()) > 0
+      ? parseInt10((await postGoodLoc.textContent()) ?? "")
+      : 0;
+  const bad_vote =
+    postBadLoc && (await postBadLoc.count()) > 0
+      ? parseInt10((await postBadLoc.textContent()) ?? "")
+      : 0;
 
   const commentItems = page.locator("ul#reply_list_layer li.normal_reply");
   const n = await commentItems.count();
@@ -111,14 +143,28 @@ async function scrapePostDetail(
     const item = commentItems.nth(i);
     const nickLoc = item.locator("div.nick").first();
     const bodyLoc = item.locator("div.body_wrap").first();
+    const nickAnchor = item.locator("div.nick a").first();
+    const voteWrap = item.locator("div.vote_wrap").first();
+    const goodLoc = voteWrap.locator("[id$='_good']").first();
+    const badLoc = voteWrap.locator("[id$='_bad']").first();
+
     const nickname =
       (await nickLoc.count()) > 0 ? ((await nickLoc.textContent()) ?? "").trim() : "";
     const commentBody =
       (await bodyLoc.count()) > 0 ? ((await bodyLoc.innerText()) ?? "").trim() : "";
-    comments.push({ nickname, commentBody });
+    const userId =
+      (await nickAnchor.count()) > 0
+        ? extractUserId((await nickAnchor.getAttribute("onclick")) ?? "")
+        : "";
+    const voteGood =
+      (await goodLoc.count()) > 0 ? parseInt10((await goodLoc.textContent()) ?? "") : 0;
+    const voteBad =
+      (await badLoc.count()) > 0 ? parseInt10((await badLoc.textContent()) ?? "") : 0;
+
+    comments.push({ userId, nickname, commentBody, voteGood, voteBad });
   }
 
-  return { postBody, comments };
+  return { postBody, good_vote, bad_vote, comments };
 }
 
 /**
@@ -162,7 +208,7 @@ async function scrapePage(context: BrowserContext, pageNum: number): Promise<Pos
     const workers = detailPages.map((page) => async (s: PostSummary) => {
       await sleep(jitterMs());
       const detail = await scrapePostDetail(page, s.url);
-      return { ...s, ...detail } satisfies Post;
+      return { postId: extractPostId(s.url), ...s, ...detail } satisfies Post;
     });
     return await mapWithWorkers(summaries, workers);
   } finally {
@@ -179,16 +225,30 @@ async function main() {
   });
 
   try {
-    const posts = await scrapePage(context, PAGE_NUM);
     const now = new Date();
-    const yy = String(now.getFullYear()).slice(-2);
-    const mm = String(now.getMonth() + 1).padStart(2, "0");
-    const dd = String(now.getDate()).padStart(2, "0");
-    const filename = `ygosu__user_${MEMBER_ID}__${PAGE_NUM}__${yy}_${mm}_${dd}.json`;
+    const dateStr = [
+      String(now.getFullYear()).slice(-2),
+      String(now.getMonth() + 1).padStart(2, "0"),
+      String(now.getDate()).padStart(2, "0"),
+    ].join("_");
     await mkdir(DATA_DIR, { recursive: true });
-    const outPath = join(DATA_DIR, filename);
-    await writeFile(outPath, JSON.stringify(posts, null, 2), "utf8");
-    console.log(`[write] ${posts.length} posts → ${outPath}`);
+
+    for (let pageNum = 1; ; pageNum++) {
+      const posts = await scrapePage(context, pageNum);
+      if (posts.length === 0) {
+        console.log(`[done] page ${pageNum} returned 0 posts — stopping`);
+        break;
+      }
+      const filename = `ygosu__user_${MEMBER_ID}__${pageNum}__${dateStr}.json`;
+      const outPath = join(DATA_DIR, filename);
+      await writeFile(outPath, JSON.stringify(posts, null, 2), "utf8");
+      console.log(`[write] ${posts.length} posts → ${outPath}`);
+
+      const cool =
+        PAGE_COOLDOWN_MIN_MS +
+        Math.random() * (PAGE_COOLDOWN_MAX_MS - PAGE_COOLDOWN_MIN_MS);
+      await sleep(cool);
+    }
   } finally {
     await context.close();
     await browser.close();

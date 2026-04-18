@@ -1,11 +1,3 @@
-# Agents
-
-For git commit msg,
-
-- scope is the package. e.g., scrape_ygosu.
-- title width 50 (soft limit)
-- line width 72 (hard limit)
-
 ## Entrypoint
 
 @scrape_ygosu/src/post.ts
@@ -44,6 +36,8 @@ Useful for deriving how many pages to iterate through.
 
 Now, if you go to the url of the post, e.g., https://ygosu.com/board/pan_monstarz/1269094, you'll see div w/ the class "container" under div ".board_body". That's the contents of the post.
 
+In this case, "1269094" is the "post id".
+
 ## Contents of comment
 
 Underneath the page, there are comments.
@@ -58,6 +52,7 @@ For each page in the table, there is a list of posts. In order to retreive the b
 
 ```typescript
 interface Post {
+  postId: string;
   category: string;
   title: string;
   url: string;
@@ -66,9 +61,14 @@ interface Post {
   recommend: number;
   commentCount: number;
   postBody: string;
+  good_vote: number;
+  bad_vote: number;
   comments: {
+    userId: string;
     nickname: string;
     commentBody: string;
+    voteGood: number;
+    voteBad: number;
   }[];
 }
 ```
