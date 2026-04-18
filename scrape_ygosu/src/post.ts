@@ -302,7 +302,7 @@ async function main() {
         console.log(`[done] page ${pageNum} returned 0 posts — stopping`);
         break;
       }
-      const filename = `ygosu__user_${MEMBER_ID}__${pageNum}__${dateStr}.json`;
+      const filename = `ygosu__pt__user_${MEMBER_ID}__${pageNum}__${dateStr}.json`;
       const outPath = join(DATA_DIR, filename);
       await writeFile(outPath, JSON.stringify(posts, null, 2), "utf8");
       console.log(`[write] ${posts.length} posts → ${outPath}`);
