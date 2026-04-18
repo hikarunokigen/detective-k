@@ -1,6 +1,14 @@
+# Agents
+
+For git commit msg,
+
+- scope is the package. e.g., scrape_ygosu.
+- title width 50 (soft limit)
+- line width 72 (hard limit)
+
 ## Entrypoint
 
-@scrape_ygosu/src/index.ts
+@scrape_ygosu/src/post.ts
 
 ## Scraping a website
 
@@ -21,6 +29,16 @@ I'd like to scrape what he has written. There were his "posts" and "comments", b
 In the table (w/ class "tbl_ua"), the column td with class "tit" is the title of the post. Inside the title td, there's an anchor element that has href (url) of the original post. I'd like to scrape title, contents, url, date, etc of these rows of the table.
 
 Let's test scraping the first page of this table.
+
+## Total post count
+
+On the listing page, the total number of posts this user has created is rendered at:
+
+```
+.det_myboard > h3:nth-child(1) > i:nth-child(3) > strong:nth-child(1)
+```
+
+Useful for deriving how many pages to iterate through.
 
 ## Contents of post
 
