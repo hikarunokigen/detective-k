@@ -80,4 +80,4 @@ interface Post {
 2. Persist the resulting data in json following the above "result format".
 
 - File name: `ygosu__user_{user_id}__{page}__{today:yy_mm_dd}.json`
-- Directory: `data/`
+- Directory: `data/yg_post/`

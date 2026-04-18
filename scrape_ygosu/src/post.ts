@@ -3,7 +3,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const DATA_DIR = join(REPO_ROOT, "data");
+const DATA_DIR = join(REPO_ROOT, "data", "yg_post");
 import { chromium, type BrowserContext, type Page } from "playwright";
 
 const MEMBER_ID = "684134";
