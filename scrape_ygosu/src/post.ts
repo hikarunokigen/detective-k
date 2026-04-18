@@ -10,7 +10,7 @@ const MEMBER_ID = "684134";
 
 const CONCURRENCY = 3;
 const MIN_JITTER_MS = 700;
-const MAX_JITTER_MS = 2000;
+const MAX_JITTER_MS = 1800;
 
 const PAGE_COOLDOWN_MIN_MS = 2000;
 const PAGE_COOLDOWN_MAX_MS = 4000;
@@ -76,10 +76,40 @@ function parseInt10(s: string | null | undefined): number {
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 const jitterMs = () => MIN_JITTER_MS + Math.random() * (MAX_JITTER_MS - MIN_JITTER_MS);
 
-async function scrapeListing(page: Page, pageNum: number): Promise<PostSummary[]> {
+async function readLastPage(page: Page): Promise<number | null> {
+  // ygosu serves the actual last page's content if you request a page beyond
+  // it (no URL change, no redirect). `b.last` in the pagination strip tells
+  // us the real upper bound so we can stop instead of looping on duplicates.
+  const lastEl = page.locator("b.last").first();
+  if ((await lastEl.count()) === 0) return null;
+
+  const text = ((await lastEl.textContent()) ?? "").trim();
+  const textNum = text.match(/\d+/)?.[0];
+  if (textNum) return Number(textNum);
+
+  const anchor = page.locator("a:has(b.last)").first();
+  if ((await anchor.count()) === 0) return null;
+  const href = (await anchor.getAttribute("href")) ?? "";
+  const onclick = (await anchor.getAttribute("onclick")) ?? "";
+  const fromHref = href.match(/[?&]page=(\d+)/)?.[1];
+  if (fromHref) return Number(fromHref);
+  const fromOnclick = onclick.match(/(\d+)/)?.[1];
+  return fromOnclick ? Number(fromOnclick) : null;
+}
+
+async function scrapeListing(
+  page: Page,
+  pageNum: number,
+): Promise<{ summaries: PostSummary[]; lastPage: number | null }> {
   const listingUrl = LISTING_URL(pageNum);
   console.log(`[listing] ${listingUrl}`);
   await page.goto(listingUrl, { waitUntil: "domcontentloaded" });
+
+  const lastPage = await readLastPage(page);
+  if (lastPage !== null && pageNum > lastPage) {
+    console.log(`[listing] page ${pageNum} > last page ${lastPage} — skipping`);
+    return { summaries: [], lastPage };
+  }
 
   const rows = page.locator("table.tbl_ua tr:has(td.tit)");
   const count = await rows.count();
@@ -116,7 +146,7 @@ async function scrapeListing(page: Page, pageNum: number): Promise<PostSummary[]
     });
   }
 
-  return summaries;
+  return { summaries, lastPage };
 }
 
 async function scrapePostDetail(
@@ -213,17 +243,25 @@ async function mapWithWorkers<T, R>(
   return results;
 }
 
-async function scrapePage(context: BrowserContext, pageNum: number): Promise<Post[]> {
+async function scrapePage(
+  context: BrowserContext,
+  pageNum: number,
+): Promise<{ posts: Post[]; lastPage: number | null }> {
   const listPage = await context.newPage();
   let summaries: PostSummary[];
+  let lastPage: number | null;
   try {
-    summaries = await scrapeListing(listPage, pageNum);
+    ({ summaries, lastPage } = await scrapeListing(listPage, pageNum));
   } finally {
     await listPage.close();
   }
 
+  if (summaries.length === 0) {
+    return { posts: [], lastPage };
+  }
+
   const detailPages = await Promise.all(
-    Array.from({ length: Math.min(CONCURRENCY, Math.max(summaries.length, 1)) }, () =>
+    Array.from({ length: Math.min(CONCURRENCY, summaries.length) }, () =>
       context.newPage(),
     ),
   );
@@ -234,7 +272,8 @@ async function scrapePage(context: BrowserContext, pageNum: number): Promise<Pos
       const detail = await scrapePostDetail(page, s.url);
       return { post_id: extractPostId(s.url), ...s, ...detail } satisfies Post;
     });
-    return await mapWithWorkers(summaries, workers);
+    const posts = await mapWithWorkers(summaries, workers);
+    return { posts, lastPage };
   } finally {
     await Promise.all(detailPages.map((p) => p.close()));
   }
@@ -258,7 +297,7 @@ async function main() {
     await mkdir(DATA_DIR, { recursive: true });
 
     for (let pageNum = 1; ; pageNum++) {
-      const posts = await scrapePage(context, pageNum);
+      const { posts, lastPage } = await scrapePage(context, pageNum);
       if (posts.length === 0) {
         console.log(`[done] page ${pageNum} returned 0 posts — stopping`);
         break;
@@ -267,6 +306,10 @@ async function main() {
       const outPath = join(DATA_DIR, filename);
       await writeFile(outPath, JSON.stringify(posts, null, 2), "utf8");
       console.log(`[write] ${posts.length} posts → ${outPath}`);
+      if (lastPage !== null && pageNum >= lastPage) {
+        console.log(`[done] reached last page ${lastPage} — stopping`);
+        break;
+      }
 
       const cool =
         PAGE_COOLDOWN_MIN_MS + Math.random() * (PAGE_COOLDOWN_MAX_MS - PAGE_COOLDOWN_MIN_MS);
