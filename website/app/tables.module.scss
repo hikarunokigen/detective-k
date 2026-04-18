@@ -1,0 +1,138 @@
+$mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+$bg: #0a0a0a;
+$border: #222;
+$border-soft: #1a1a1a;
+$fg: #ddd;
+$muted: #888;
+
+.summary {
+  padding: 8px 10px;
+  color: $muted;
+  font-size: 11px;
+  border-bottom: 1px solid $border;
+  background: #0a0a0a;
+  font-family: $mono;
+}
+
+.wrap {
+  font-family: $mono;
+  font-size: 12px;
+  border: 1px solid $border;
+  height: 70vh;
+  overflow: auto;
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  color: #eee;
+  z-index: 1;
+  display: flex;
+  border-bottom: 1px solid $border;
+}
+
+.headerCell {
+  padding: 6px 10px;
+  flex-shrink: 0;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+
+  &:hover {
+    background: #222;
+  }
+}
+
+.sortIndicator {
+  margin-left: 4px;
+  opacity: 0.6;
+}
+
+.rowsLayer {
+  position: relative;
+  width: 100%;
+}
+
+.row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid $border-soft;
+  box-sizing: border-box;
+}
+
+.rowInner {
+  display: flex;
+  width: 100%;
+}
+
+.cell {
+  padding: 6px 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cellNum {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.expandBtn {
+  width: 24px;
+  padding: 6px 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: $muted;
+  font: inherit;
+  flex-shrink: 0;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.titleCell {
+  a {
+    color: #cde;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.body {
+  padding: 8px 34px 12px;
+  color: #bbb;
+  white-space: pre-wrap;
+  border-top: 1px dashed $border;
+  background: #0b0b0b;
+}
+
+.subTable {
+  margin: 8px 34px 12px;
+  border-left: 2px solid $border;
+  padding-left: 10px;
+  background: #0b0b0b;
+}
+
+.subRow {
+  padding: 4px 0;
+  border-bottom: 1px solid #141414;
+  white-space: pre-wrap;
+  color: #aaa;
+}
+
+.subMeta {
+  color: #7a8;
+  margin-right: 8px;
+}

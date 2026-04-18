@@ -1,0 +1,38 @@
+$mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+.main {
+  padding: 24px 20px;
+  background: #0a0a0a;
+  color: #ddd;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.title {
+  margin: 0;
+  font-family: $mono;
+  font-size: 20px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.section {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sectionHeading {
+  font-family: $mono;
+  font-size: 14px;
+  color: #aaa;
+}
