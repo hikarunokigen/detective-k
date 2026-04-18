@@ -44,8 +44,7 @@ function parseInt10(s: string | null | undefined): number {
 }
 
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
-const jitterMs = () =>
-  MIN_JITTER_MS + Math.random() * (MAX_JITTER_MS - MIN_JITTER_MS);
+const jitterMs = () => MIN_JITTER_MS + Math.random() * (MAX_JITTER_MS - MIN_JITTER_MS);
 
 async function scrapeListing(page: Page, pageNum: number): Promise<PostSummary[]> {
   const listingUrl = LISTING_URL(pageNum);
@@ -98,10 +97,9 @@ async function scrapePostDetail(
   await page.goto(url, { waitUntil: "domcontentloaded" });
 
   const body = page.locator(".board_body .container").first();
-  const postBody =
-    (await body.count()) > 0 ? ((await body.innerText()) ?? "").trim() : "";
+  const postBody = (await body.count()) > 0 ? ((await body.innerText()) ?? "").trim() : "";
 
-  const commentItems = page.locator("ul#reply_list_layer li#normal_reply");
+  const commentItems = page.locator("ul#reply_list_layer li.normal_reply");
   const n = await commentItems.count();
   const comments: Comment[] = [];
   for (let i = 0; i < n; i++) {
@@ -136,10 +134,7 @@ async function mapWithWorkers<T, R>(
   return results;
 }
 
-async function scrapePage(
-  context: BrowserContext,
-  pageNum: number,
-): Promise<Post[]> {
+async function scrapePage(context: BrowserContext, pageNum: number): Promise<Post[]> {
   const listPage = await context.newPage();
   let summaries: PostSummary[];
   try {

@@ -26,9 +26,11 @@ Let's test scraping the first page of this table.
 
 Now, if you go to the url of the post, e.g., https://ygosu.com/board/pan_monstarz/1269094, you'll see div w/ the class "container" under div ".board_body". That's the contents of the post.
 
+## Contents of comment
+
 Underneath the page, there are comments.
 
-Under ul#reply_list_layer, there is a list of li#normal_reply. Each li has div.body_wrap. The contents of which is the comment body. div.nick has the author of that reply.
+Under ul#reply_list_layer, there is a list of li#normal_reply (s). Each li has div.body_wrap. The contents of which is the comment body. div.nick has the author of that reply.
 
 ## Parallelism
 
