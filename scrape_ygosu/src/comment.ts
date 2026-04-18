@@ -17,6 +17,7 @@ const LISTING_URL = (page: number) =>
 interface Comment {
   post_id: string;
   post_title: string;
+  comment_id: string;
   comment_body: string;
   comment_datetime: string;
   vote_good: number;
@@ -32,6 +33,11 @@ function absolutize(href: string): string {
 function extractPostId(url: string): string {
   // /board/pan_monstarz/1290400/?comment_idx=2755303  →  "1290400"
   return url.match(/\/board\/[^/]+\/(\d+)/)?.[1] ?? "";
+}
+
+function extractCommentId(url: string): string {
+  // /board/pan_monstarz/1290400/?comment_idx=2755303  →  "2755303"
+  return url.match(/[?&]comment_idx=(\d+)/)?.[1] ?? "";
 }
 
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
@@ -76,22 +82,19 @@ async function scrapeCommentListing(
   for (let i = 0; i < count; i++) {
     const box = boxes.nth(i);
 
-    // COMMENT.md anatomy:
+    // Anatomy (per COMMENT.md + real page):
     //   div.mrbox
-    //     > div:nth-child(1)            ← header (div.title)
+    //     > div:nth-child(1)            ← header
     //         > h5 > a:nth-child(1)     ← board link
     //         > h5 > a:nth-child(2)     ← post link
     //         > p:nth-child(2)          ← datetime
-    //         (body lives somewhere in the box; selector not in the spec)
-    //     > div:nth-child(2)
-    //         > span:nth-child(3)       ← "good | bad" vote counts
+    //     > div.desc                    ← comment body (as innerText)
+    //         > span (with "추천 N 비추 M")  ← vote counts
     const header = box.locator(":scope > div").nth(0);
-    const tail = box.locator(":scope > div").nth(1);
+    const desc = box.locator("div.desc").first();
 
-    const boardAnchor = header.locator("h5 a").nth(0);
     const postAnchor = header.locator("h5 a").nth(1);
     const dateP = header.locator("p").nth(0);
-    const voteSpan = tail.locator("span").nth(2);
 
     const postTitle =
       (await postAnchor.count()) > 0 ? ((await postAnchor.textContent()) ?? "").trim() : "";
@@ -99,34 +102,29 @@ async function scrapeCommentListing(
       (await postAnchor.count()) > 0 ? ((await postAnchor.getAttribute("href")) ?? "") : "";
     const postUrl = absolutize(postHref);
     const postId = extractPostId(postUrl);
-
-    const boardText =
-      (await boardAnchor.count()) > 0 ? ((await boardAnchor.textContent()) ?? "").trim() : "";
+    const commentId = extractCommentId(postUrl);
 
     const rawDate = (await dateP.count()) > 0 ? ((await dateP.textContent()) ?? "").trim() : "";
     const commentDatetime = rawDate.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/)?.[0] ?? "";
 
-    // Body: COMMENT.md doesn't pin a selector for the comment body. As a
-    // first cut, take the header's full text and strip the parts we already
-    // identified (board, post title, datetime). Refine once we see real
-    // output — the body probably has its own class worth targeting.
-    const headerInner =
-      (await header.count()) > 0 ? ((await header.innerText()) ?? "").trim() : "";
-    let commentBody = headerInner;
-    for (const piece of [boardText, postTitle, rawDate]) {
-      if (piece) commentBody = commentBody.split(piece).join("");
-    }
-    commentBody = commentBody.replace(/\n{3,}/g, "\n\n").trim();
-
+    // Vote span lives inside div.desc and is labelled "추천 N 비추 M" (any
+    // separator, any whitespace). Pick it by text match so we don't depend
+    // on its positional index among siblings.
+    const voteSpan = desc.locator("span", { hasText: "추천" }).first();
     const voteText =
       (await voteSpan.count()) > 0 ? ((await voteSpan.textContent()) ?? "").trim() : "";
-    const voteNums = [...voteText.matchAll(/\d+/g)].map((m) => Number(m[0]));
-    const voteGood = voteNums[0] ?? 0;
-    const voteBad = voteNums[1] ?? 0;
+    const voteGood = Number(voteText.match(/추천[^\d-]*(-?\d+)/)?.[1] ?? 0);
+    const voteBad = Number(voteText.match(/비추[^\d-]*(-?\d+)/)?.[1] ?? 0);
+
+    // Body: innerText of div.desc minus the vote span text (which is the
+    // only non-body node inside desc).
+    const descText = (await desc.count()) > 0 ? ((await desc.innerText()) ?? "") : "";
+    const commentBody = (voteText ? descText.replace(voteText, "") : descText).trim();
 
     comments.push({
       post_id: postId,
       post_title: postTitle,
+      comment_id: commentId,
       comment_body: commentBody,
       comment_datetime: commentDatetime,
       vote_good: voteGood,

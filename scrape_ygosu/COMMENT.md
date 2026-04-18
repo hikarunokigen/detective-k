@@ -32,7 +32,8 @@ For example, in the page "https://ygosu.com/minilog/?m2=article&m3=comment&membe
 
 "[스타대학]" is the name of the board.
 "/board/pan_monstarz/1290400/?comment_idx=2755303" is the URL of the post.
-"1290400" is the post id
+"1290400" is the post id.
+"2755303" is the comment id
 "근데 혹시 케이대도 같이보는 사람있음?" is the title of the post.
 "2026-04-19 00:34:58" is the datetime of this comment.
 "애들방 구걸이라도하면 선녀지 시발 개소리노\n\n 앉아서 담배피다가 시간되면 다시 노력하는척함" is the body of comment.
@@ -44,6 +45,7 @@ For example, in the page "https://ygosu.com/minilog/?m2=article&m3=comment&membe
 interface Comment {
   post_id: string;
   post_title: string;
+  comment_id: string;
   comment_body: string;
   comment_datetime: string;
   vote_good: number;

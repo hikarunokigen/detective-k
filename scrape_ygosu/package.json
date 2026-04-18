@@ -4,12 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/post.ts",
-    "start": "tsx src/post.ts",
-    "dev:comment": "tsx watch src/comment.ts",
+    "start:post": "tsx src/post.ts",
     "start:comment": "tsx src/comment.ts",
-    "test:comments": "tsx src/post.test.ts",
-    "test:comment-listing": "tsx src/comment.test.ts",
+    "test:post": "tsx src/post.test.ts",
+    "test:comment": "tsx src/comment.test.ts",
     "build": "tsc",
     "typecheck": "tsc --noEmit"
   },
