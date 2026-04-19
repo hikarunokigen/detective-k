@@ -208,6 +208,10 @@ async function scrapePostDetail(
     // `span.reply_nick` only appears on inner replies — it names the parent
     // comment's author. Absent on top-level replies, so we default to null.
     const replyNickLoc = item.locator("span.reply_nick").first();
+    // Comment id lives in the id attribute of the body div, shaped as
+    // `reply_body_<board>_<commentId>`. The trailing numeric segment is the
+    // comment id.
+    const replyBodyIdLoc = bodyLoc.locator("div[id^='reply_body_']").first();
 
     const nickname =
       (await nickLoc.count()) > 0 ? ((await nickLoc.textContent()) ?? "").trim() : "";
@@ -224,11 +228,16 @@ async function scrapePostDetail(
       (await replyNickLoc.count()) > 0
         ? ((await replyNickLoc.textContent()) ?? "").trim() || null
         : null;
+    const commentId =
+      (await replyBodyIdLoc.count()) > 0
+        ? ((await replyBodyIdLoc.getAttribute("id")) ?? "").match(/_(\d+)$/)?.[1] ?? ""
+        : "";
 
     comments.push({
       user_id: userId,
       nickname,
       reply_nick: replyNick,
+      comment_id: commentId,
       comment_body: commentBody,
       vote_good: voteGood,
       vote_bad: voteBad,

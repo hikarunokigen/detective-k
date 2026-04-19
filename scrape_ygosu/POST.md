@@ -48,6 +48,8 @@ Underneath the page, there are comments.
 
 Under ul#reply_list_layer, there is a list of li#normal_reply (s). Each li has div.body_wrap. The contents of which is the comment body. div.nick has the author of that reply.
 
+For each comment under .body_wrap, there is div#reply_body_pan_monstarz_2711076. In the value of id, "2711076" is the comment id. So to extract it, we need to process the string.
+
 ## Parallelism
 
 For each page in the table, there is a list of posts. In order to retreive the body and comments of each post, we need to visit that web page. Visiting a list of those web pages can be parallelized. However, we should also consider rate limiting as the host website may block us. So we need to pause every once in a while properly.
@@ -79,6 +81,7 @@ interface Post {
     user_id: string;
     nickname: string;
     reply_nick: string | null;
+    comment_id: string;
     comment_body: string;
     vote_good: number;
     vote_bad: number;

@@ -8,6 +8,7 @@ export interface PostComment {
   user_id: string;
   nickname: string;
   reply_nick: string | null;
+  comment_id: string;
   comment_body: string;
   vote_good: number;
   vote_bad: number;
