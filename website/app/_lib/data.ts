@@ -1,6 +1,6 @@
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
-import type { Comment, Post } from "./types";
+import type { Comment, Post } from "ygosu_types";
 
 const DATA_ROOT = join(process.cwd(), "..", "data");
 

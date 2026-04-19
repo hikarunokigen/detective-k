@@ -35,6 +35,9 @@ importers:
       playwright:
         specifier: ^1.59.1
         version: 1.59.1
+      ygosu_types:
+        specifier: workspace:*
+        version: link:../ygosu_types
     devDependencies:
       tsx:
         specifier: ^4.21.0
@@ -57,6 +60,9 @@ importers:
       react-dom:
         specifier: ^19.2.5
         version: 19.2.5(react@19.2.5)
+      ygosu_types:
+        specifier: workspace:*
+        version: link:../ygosu_types
     devDependencies:
       '@types/react':
         specifier: ^19.2.14
@@ -67,6 +73,8 @@ importers:
       sass:
         specifier: ^1.80.0
         version: 1.99.0
+
+  ygosu_types: {}
 
 packages:
 

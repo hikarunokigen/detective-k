@@ -12,7 +12,7 @@ import { useVirtualizer } from "@tanstack/react-virtual";
 import { useMemo, useRef, useState } from "react";
 
 import styles from "./tables.module.scss";
-import type { Comment } from "./_lib/types";
+import type { Comment } from "ygosu_types";
 
 const ROW_HEIGHT = 30;
 const EXPAND_PADDING = 60;

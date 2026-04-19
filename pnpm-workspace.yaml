@@ -1,3 +1,4 @@
 packages:
   - scrape_ygosu
   - website
+  - ygosu_types

@@ -2,6 +2,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium, type Page } from "playwright";
+import type { Comment } from "ygosu_types";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const DATA_DIR = join(REPO_ROOT, "data", "yg_comment");
@@ -13,16 +14,6 @@ const PAGE_COOLDOWN_MAX_MS = 4000;
 
 const LISTING_URL = (page: number) =>
   `https://ygosu.com/minilog/?m2=article&m3=comment&member=${MEMBER_ID}&search=&page=${page}`;
-
-interface Comment {
-  post_id: string;
-  post_title: string;
-  comment_id: string;
-  comment_body: string;
-  comment_datetime: string;
-  vote_good: number;
-  vote_bad: number;
-}
 
 function absolutize(href: string): string {
   if (href.startsWith("//")) return `https:${href}`;

@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "playwright": "^1.59.1"
+    "playwright": "^1.59.1",
+    "ygosu_types": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.21.0"

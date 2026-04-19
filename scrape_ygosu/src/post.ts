@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const DATA_DIR = join(REPO_ROOT, "data", "yg_post");
 import { chromium, type BrowserContext, type Page } from "playwright";
+import type { Post, PostComment } from "ygosu_types";
 
 const MEMBER_ID = "684134";
 
@@ -18,15 +19,8 @@ const PAGE_COOLDOWN_MAX_MS = 4000;
 const LISTING_URL = (page: number) =>
   `https://ygosu.com/minilog/?m2=article&m3=list&member=${MEMBER_ID}&search=&searcht=s&page=${page}`;
 
-interface Comment {
-  user_id: string;
-  nickname: string;
-  reply_nick: string | null;
-  comment_body: string;
-  vote_good: number;
-  vote_bad: number;
-}
-
+// Scraper-internal shape — the bare listing row; scrapePage merges this
+// with scrapePostDetail's output to produce the exported `Post`.
 interface PostSummary {
   category: string;
   title: string;
@@ -35,23 +29,6 @@ interface PostSummary {
   views: number;
   recommend: number;
   comment_count: number;
-}
-
-interface Post {
-  post_id: string;
-  category: string;
-  title: string;
-  url: string;
-  listing_date: string;
-  listing_datetime: string;
-  views: number;
-  recommend: number;
-  comment_count: number;
-  is_blinded: boolean;
-  post_body: string;
-  good_vote: number;
-  bad_vote: number;
-  comments: Comment[];
 }
 
 function extractPostId(url: string): string {
@@ -162,7 +139,7 @@ async function scrapePostDetail(
   listing_datetime: string;
   good_vote: number;
   bad_vote: number;
-  comments: Comment[];
+  comments: PostComment[];
 }> {
   console.log(`[detail] ${url}`);
   await page.goto(url, { waitUntil: "domcontentloaded" });
@@ -204,7 +181,7 @@ async function scrapePostDetail(
     "ul#reply_list_layer li.normal_reply, ul#reply_list_layer li.inner_reply",
   );
   const n = await commentItems.count();
-  const comments: Comment[] = [];
+  const comments: PostComment[] = [];
   for (let i = 0; i < n; i++) {
     const item = commentItems.nth(i);
     const nickLoc = item.locator("div.nick").first();

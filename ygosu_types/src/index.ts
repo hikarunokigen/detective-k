@@ -1,3 +1,9 @@
+/**
+ * Shapes that both the scraper (scrape_ygosu) and the website consume.
+ * Keep these aligned with POST.md / COMMENT.md — they're the wire format
+ * of the JSON files persisted under `data/yg_post/` and `data/yg_comment/`.
+ */
+
 export interface PostComment {
   user_id: string;
   nickname: string;
