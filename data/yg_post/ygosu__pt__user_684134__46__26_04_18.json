@@ -5,7 +5,7 @@
     "title": "키링은 원래 초창기대학판이였으면 3~5티어 배정임 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/14006651",
     "listing_date": "25.04.13",
-    "views": 81,
+    "views": 82,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -13,6 +13,8 @@
     "listing_datetime": "2025-04-13 01:21:19",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -21,7 +23,7 @@
     "title": "기석이 ㅣㅣ견으로 갈아탐 ㅇㅇ?!ㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/14006617",
     "listing_date": "25.04.13",
-    "views": 103,
+    "views": 104,
     "recommend": 1,
     "comment_count": 0,
     "is_blinded": false,
@@ -29,6 +31,8 @@
     "listing_datetime": "2025-04-13 01:14:49",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -37,7 +41,7 @@
     "title": "노도 썩은 둘이 싸울때가 아니였던거같노 ㅇㅇ!ㅋㅋㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13998678",
     "listing_date": "25.04.11",
-    "views": 270,
+    "views": 273,
     "recommend": 2,
     "comment_count": 0,
     "is_blinded": false,
@@ -45,6 +49,8 @@
     "listing_datetime": "2025-04-11 22:11:01",
     "good_vote": 2,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -53,7 +59,7 @@
     "title": "최근에는 ㅣㅣ햄이 똥보다 낫노 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13996851",
     "listing_date": "25.04.11",
-    "views": 77,
+    "views": 78,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -61,6 +67,8 @@
     "listing_datetime": "2025-04-11 17:53:07",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -69,7 +77,7 @@
     "title": "보햄 유미 닮아가나? 영악해진건 처음보네 ㅇㅇ!ㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13995320",
     "listing_date": "25.04.11",
-    "views": 100,
+    "views": 101,
     "recommend": 1,
     "comment_count": 0,
     "is_blinded": false,
@@ -77,6 +85,8 @@
     "listing_datetime": "2025-04-11 12:41:01",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -85,7 +95,7 @@
     "title": "애: 내가 짜른다고한적있나? //장: 승률 50%안되면 퇴학",
     "url": "https://ygosu.com/board/starbbs/13993486",
     "listing_date": "25.04.11",
-    "views": 33,
+    "views": 34,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -93,6 +103,8 @@
     "listing_datetime": "2025-04-11 02:33:25",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -101,7 +113,7 @@
     "title": "요즘 용변보면 영화 기생충 그자체임 ㅇㅇ!ㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13993224",
     "listing_date": "25.04.11",
-    "views": 64,
+    "views": 65,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -109,6 +121,8 @@
     "listing_datetime": "2025-04-11 02:17:58",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -117,7 +131,7 @@
     "title": "히댕 공지 크랙댓글 ㅇㅇ!ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13990972",
     "listing_date": "25.04.11",
-    "views": 3877,
+    "views": 3878,
     "recommend": 66,
     "comment_count": 5,
     "is_blinded": false,
@@ -125,11 +139,14 @@
     "listing_datetime": "2025-04-11 00:11:21",
     "good_vote": 66,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "695560",
         "nickname": "늑대부대",
         "reply_nick": null,
+        "comment_id": "23725059",
         "comment_body": "닉만봐도 빵터지네 ㄷㄷ 베스트 댓글",
         "vote_good": 15,
         "vote_bad": 0
@@ -138,6 +155,7 @@
         "user_id": "434379",
         "nickname": "A-사이버룸살롱",
         "reply_nick": null,
+        "comment_id": "23725163",
         "comment_body": "까보똥",
         "vote_good": 1,
         "vote_bad": 1
@@ -146,6 +164,7 @@
         "user_id": "655439",
         "nickname": "크으래용",
         "reply_nick": null,
+        "comment_id": "23725173",
         "comment_body": "",
         "vote_good": 1,
         "vote_bad": 0
@@ -154,6 +173,7 @@
         "user_id": "621542",
         "nickname": "삐빠끄",
         "reply_nick": null,
+        "comment_id": "23725349",
         "comment_body": "왜 턱누구한테맞음?",
         "vote_good": 0,
         "vote_bad": 0
@@ -162,6 +182,7 @@
         "user_id": "667420",
         "nickname": "왜구폐미",
         "reply_nick": null,
+        "comment_id": "23727650",
         "comment_body": "길.평",
         "vote_good": 0,
         "vote_bad": 0
@@ -174,7 +195,7 @@
     "title": "근데 히댕이 하는행동이 ㅈ목 표현쓰는게 맞지 ㅇㅇ!?",
     "url": "https://ygosu.com/board/starbbs/13990247",
     "listing_date": "25.04.10",
-    "views": 34,
+    "views": 35,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -182,6 +203,8 @@
     "listing_datetime": "2025-04-10 23:35:18",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -190,7 +213,7 @@
     "title": "똥댕 <<내가볼땐 네토성향임 ㅇㅇ!ㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13990187",
     "listing_date": "25.04.10",
-    "views": 52,
+    "views": 53,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -198,6 +221,8 @@
     "listing_datetime": "2025-04-10 23:32:34",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -206,7 +231,7 @@
     "title": "니네 인간이면 오늘은 진짜 똥댕이욕하지마라 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13990133",
     "listing_date": "25.04.10",
-    "views": 37,
+    "views": 38,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -214,6 +239,8 @@
     "listing_datetime": "2025-04-10 23:30:47",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -222,7 +249,7 @@
     "title": "근데 똥햄은 여자랑 남자랑 낙수기준이 바뀐거아님 ㅇㅇ?!",
     "url": "https://ygosu.com/board/starbbs/13983362",
     "listing_date": "25.04.10",
-    "views": 76,
+    "views": 78,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -230,6 +257,8 @@
     "listing_datetime": "2025-04-10 13:13:20",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -238,7 +267,7 @@
     "title": "와붕이들아 이런상황에 누구 잘못이냐 ㅇㅇ?!",
     "url": "https://ygosu.com/board/starbbs/13983091",
     "listing_date": "25.04.10",
-    "views": 60,
+    "views": 61,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -246,6 +275,8 @@
     "listing_datetime": "2025-04-10 12:14:10",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -254,7 +285,7 @@
     "title": "리트리버))) 자동게이야 썩대 이름 JDU로 바꿔야겠노 !",
     "url": "https://ygosu.com/board/starbbs/13979605",
     "listing_date": "25.04.10",
-    "views": 105,
+    "views": 106,
     "recommend": 0,
     "comment_count": 3,
     "is_blinded": false,
@@ -262,11 +293,14 @@
     "listing_datetime": "2025-04-10 00:18:00",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "671659",
         "nickname": "sibasiba",
         "reply_nick": null,
+        "comment_id": "23714507",
         "comment_body": "ㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -275,6 +309,7 @@
         "user_id": "684134",
         "nickname": "김가리가리",
         "reply_nick": "@sibasiba",
+        "comment_id": "23714528",
         "comment_body": "@sibasiba시바햄 이번달 기분째짐 ㅇㅇ?!",
         "vote_good": 0,
         "vote_bad": 0
@@ -283,6 +318,7 @@
         "user_id": "671659",
         "nickname": "sibasiba",
         "reply_nick": "@김가리가리",
+        "comment_id": "23714533",
         "comment_body": "@김가리가리야스",
         "vote_good": 0,
         "vote_bad": 0
@@ -295,7 +331,7 @@
     "title": "돼돌이 <<< 좌표찍고 괴롭힌 통키들도 반성해야지ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13978579",
     "listing_date": "25.04.09",
-    "views": 60,
+    "views": 61,
     "recommend": 1,
     "comment_count": 0,
     "is_blinded": false,
@@ -303,6 +339,8 @@
     "listing_datetime": "2025-04-09 22:41:37",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -311,7 +349,7 @@
     "title": "근데 똥은 왜이렇게 썩한테 드립 살살치냐 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13974229",
     "listing_date": "25.04.09",
-    "views": 37,
+    "views": 38,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -319,6 +357,8 @@
     "listing_datetime": "2025-04-09 19:58:28",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -327,7 +367,7 @@
     "title": "보똥이햄은 왜자꾸 자기말을 자기가 반박함 ㅇㅇ?!ㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13972932",
     "listing_date": "25.04.09",
-    "views": 49,
+    "views": 50,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -335,6 +375,8 @@
     "listing_datetime": "2025-04-09 18:24:18",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -343,7 +385,7 @@
     "title": "ㄹㅇ 방금 뷰봇이 왜좋은지 체감함ㄷㄷㄷㄷㄷㄷㄷ",
     "url": "https://ygosu.com/board/starbbs/13972649",
     "listing_date": "25.04.09",
-    "views": 88,
+    "views": 89,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -351,6 +393,8 @@
     "listing_datetime": "2025-04-09 18:01:14",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -359,7 +403,7 @@
     "title": "아 시발 스대게 실인게보다가 30분 기절함 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13971991",
     "listing_date": "25.04.09",
-    "views": 82,
+    "views": 83,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -367,6 +411,8 @@
     "listing_datetime": "2025-04-09 15:15:29",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -375,7 +421,7 @@
     "title": "근데 재메이햄 대체 기본소득 25만원씩 왜주는거임 ㅇㅇ?!",
     "url": "https://ygosu.com/board/starbbs/13970261",
     "listing_date": "25.04.09",
-    "views": 140,
+    "views": 141,
     "recommend": 0,
     "comment_count": 4,
     "is_blinded": false,
@@ -383,11 +429,14 @@
     "listing_datetime": "2025-04-09 03:48:38",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "491759",
         "nickname": "jaeeeee",
         "reply_nick": null,
+        "comment_id": "23705886",
         "comment_body": "포퓰리즘",
         "vote_good": 0,
         "vote_bad": 0
@@ -396,6 +445,7 @@
         "user_id": "663700",
         "nickname": "멸자의눈",
         "reply_nick": null,
+        "comment_id": "23705888",
         "comment_body": "친구비 뿌리는거임요 ㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -404,6 +454,7 @@
         "user_id": "694639",
         "nickname": "Hll낙",
         "reply_nick": null,
+        "comment_id": "23705889",
         "comment_body": "정확히는 연100임",
         "vote_good": 0,
         "vote_bad": 0
@@ -412,6 +463,7 @@
         "user_id": "688904",
         "nickname": "아데토쿤보",
         "reply_nick": null,
+        "comment_id": "23705911",
         "comment_body": "주긴 뭘 줘\n뻥카임",
         "vote_good": 0,
         "vote_bad": 0
@@ -424,7 +476,7 @@
     "title": "펨베에 망뚜 파묘 너무 쌘거떴는데ㄷㄷㄷㄷㄷㄷ",
     "url": "https://ygosu.com/board/starbbs/13960056",
     "listing_date": "25.04.07",
-    "views": 148,
+    "views": 149,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -432,6 +484,8 @@
     "listing_datetime": "2025-04-07 18:19:20",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -440,7 +494,7 @@
     "title": "용변 펨베에서 난도질을 당하노ㅠㅠ",
     "url": "https://ygosu.com/board/starbbs/13959713",
     "listing_date": "25.04.07",
-    "views": 80,
+    "views": 81,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -448,6 +502,8 @@
     "listing_datetime": "2025-04-07 17:53:44",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -456,7 +512,7 @@
     "title": "근데 왁햄 지금 크루딱지떼면 체급 줄어들걸 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13957296",
     "listing_date": "25.04.07",
-    "views": 67,
+    "views": 69,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -464,6 +520,8 @@
     "listing_datetime": "2025-04-07 13:54:02",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -472,7 +530,7 @@
     "title": "통키들 왁햄 스타판오면 어떡함 ㅇㅇ?!ㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13957248",
     "listing_date": "25.04.07",
-    "views": 148,
+    "views": 149,
     "recommend": 0,
     "comment_count": 8,
     "is_blinded": false,
@@ -480,11 +538,14 @@
     "listing_datetime": "2025-04-07 13:47:20",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "478248",
         "nickname": "boveda",
         "reply_nick": null,
+        "comment_id": "23689468",
         "comment_body": "객관적인 팩트네",
         "vote_good": 1,
         "vote_bad": 0
@@ -493,6 +554,7 @@
         "user_id": "692624",
         "nickname": "박수건달",
         "reply_nick": null,
+        "comment_id": "23689470",
         "comment_body": "ㅇㅇ 맞음 ㅈ망대학 yb",
         "vote_good": 0,
         "vote_bad": 0
@@ -501,6 +563,7 @@
         "user_id": "693341",
         "nickname": "염순이히요코",
         "reply_nick": null,
+        "comment_id": "23689473",
         "comment_body": "ㅇㅇ",
         "vote_good": 0,
         "vote_bad": 0
@@ -509,6 +572,7 @@
         "user_id": "695382",
         "nickname": "염저스알렉산더",
         "reply_nick": null,
+        "comment_id": "23689476",
         "comment_body": "그건 괜찮은데 용변에서 ㅈ같이굴고 성적 ㅈ박아서 짤린년들 왁쪽에 붙어서 또 풍 존나 받을 생각하니까 벌써부터 죽여버리고싶노",
         "vote_good": 0,
         "vote_bad": 0
@@ -517,6 +581,7 @@
         "user_id": "632615",
         "nickname": "커피쏟은모리",
         "reply_nick": null,
+        "comment_id": "23689477",
         "comment_body": "엥 매물이 없는데 뭔 3강ㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -525,6 +590,7 @@
         "user_id": "676275",
         "nickname": "망아가",
         "reply_nick": null,
+        "comment_id": "23689478",
         "comment_body": "젖길을 따로 분리할지언정 남은 와썩노에 껴야지",
         "vote_good": 0,
         "vote_bad": 0
@@ -533,6 +599,7 @@
         "user_id": "684134",
         "nickname": "김가리가리",
         "reply_nick": "@망아가",
+        "comment_id": "23689503",
         "comment_body": "@망아가ㅇㅈㅇㅈㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ\n\n눈깔 젖 풍 ㅣㅣ 2강 만들고\n\n왁똥썩노ㅇㅇ!ㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -541,6 +608,7 @@
         "user_id": "193369",
         "nickname": "쿠쿠다스멘탈1",
         "reply_nick": null,
+        "comment_id": "23689479",
         "comment_body": "남순이는 염보 보다 더 찐텐 아니야?",
         "vote_good": 0,
         "vote_bad": 0
@@ -553,7 +621,7 @@
     "title": "나는 용변 차라리 저런 공지좀 안쌌으면 좋겠음 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13957080",
     "listing_date": "25.04.07",
-    "views": 61,
+    "views": 62,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -561,6 +629,8 @@
     "listing_datetime": "2025-04-07 13:16:04",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -569,7 +639,7 @@
     "title": "이제 누구 짜른다는걸로 절대 안속는게 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13957039",
     "listing_date": "25.04.07",
-    "views": 55,
+    "views": 56,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -577,6 +647,8 @@
     "listing_datetime": "2025-04-07 13:06:59",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -585,7 +657,7 @@
     "title": "똥: 늑채 팥순 안나옵니다 여러분들 // 키: 스포안할게요",
     "url": "https://ygosu.com/board/starbbs/13955243",
     "listing_date": "25.04.07",
-    "views": 108,
+    "views": 109,
     "recommend": 1,
     "comment_count": 0,
     "is_blinded": false,
@@ -593,6 +665,8 @@
     "listing_datetime": "2025-04-07 03:22:30",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -601,7 +675,7 @@
     "title": "펨베에서 유미<<<로 타겟 계속바꾸는애들보면 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13954450",
     "listing_date": "25.04.07",
-    "views": 101,
+    "views": 102,
     "recommend": 0,
     "comment_count": 2,
     "is_blinded": false,
@@ -609,11 +683,14 @@
     "listing_datetime": "2025-04-07 01:38:00",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "374323",
         "nickname": "황태식",
         "reply_nick": null,
+        "comment_id": "23685363",
         "comment_body": "뭐 촌지 안쏜다고 욕하라는게 아닌데 시발 너무 눈에 띄게 타겟ㄱ돌리니까 개병신같음",
         "vote_good": 0,
         "vote_bad": 0
@@ -622,6 +699,7 @@
         "user_id": "529189",
         "nickname": "원더보이",
         "reply_nick": null,
+        "comment_id": "23685364",
         "comment_body": "된장견은 죽여야 된당께",
         "vote_good": 0,
         "vote_bad": 0
@@ -634,7 +712,7 @@
     "title": "케이(썩햄)야 신생아 도둑질한거좀 내놓으라노 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13951765",
     "listing_date": "25.04.06",
-    "views": 97,
+    "views": 98,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -642,6 +720,8 @@
     "listing_datetime": "2025-04-06 21:51:24",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -650,7 +730,7 @@
     "title": "염보성 1400따리 골드 다이아팬방이지? 구라지?",
     "url": "https://ygosu.com/board/starbbs/13948816",
     "listing_date": "25.04.06",
-    "views": 86,
+    "views": 87,
     "recommend": 1,
     "comment_count": 0,
     "is_blinded": false,
@@ -658,6 +738,8 @@
     "listing_datetime": "2025-04-06 14:45:55",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   }
 ]

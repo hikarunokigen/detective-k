@@ -5,7 +5,7 @@
     "title": "커서보면 다르다+ 주인+얘내들",
     "url": "https://ygosu.com/board/pan_monstarz/1136547",
     "listing_date": "26.03.19",
-    "views": 77,
+    "views": 78,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -13,6 +13,8 @@
     "listing_datetime": "2026-03-19 04:17:29",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -21,7 +23,7 @@
     "title": "박하악이 한번달고나니까ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/pan_monstarz/1136503",
     "listing_date": "26.03.19",
-    "views": 1421,
+    "views": 1423,
     "recommend": 11,
     "comment_count": 3,
     "is_blinded": false,
@@ -29,11 +31,14 @@
     "listing_datetime": "2026-03-19 03:47:42",
     "good_vote": 11,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "628179",
         "nickname": "시드니의별",
         "reply_nick": null,
+        "comment_id": "2421176",
         "comment_body": "ㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -42,6 +47,7 @@
         "user_id": "518650",
         "nickname": "함바짐사장유나니",
         "reply_nick": null,
+        "comment_id": "2421193",
         "comment_body": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -50,6 +56,7 @@
         "user_id": "520391",
         "nickname": "11223344556677",
         "reply_nick": null,
+        "comment_id": "2421202",
         "comment_body": "순수 열폭 ㅋㅋ 베스트 댓글",
         "vote_good": 4,
         "vote_bad": 0
@@ -62,7 +69,7 @@
     "title": "다시는 부계로 씹환이방송 안봄",
     "url": "https://ygosu.com/board/pan_monstarz/1136240",
     "listing_date": "26.03.19",
-    "views": 171,
+    "views": 172,
     "recommend": 4,
     "comment_count": 5,
     "is_blinded": false,
@@ -70,11 +77,14 @@
     "listing_datetime": "2026-03-19 02:35:29",
     "good_vote": 4,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "691887",
         "nickname": "랑애",
         "reply_nick": null,
+        "comment_id": "2420428",
         "comment_body": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -83,6 +93,7 @@
         "user_id": "700425",
         "nickname": "캄암암캄",
         "reply_nick": null,
+        "comment_id": "2420430",
         "comment_body": "ㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -91,6 +102,7 @@
         "user_id": "701976",
         "nickname": "진땅콩",
         "reply_nick": null,
+        "comment_id": "2420435",
         "comment_body": "씹환이를 모르노",
         "vote_good": 0,
         "vote_bad": 0
@@ -99,6 +111,7 @@
         "user_id": "655139",
         "nickname": "이런병신같은빌드",
         "reply_nick": null,
+        "comment_id": "2420445",
         "comment_body": "ㅋㅋㅋㅋㅋㄱㅅㅂ",
         "vote_good": 0,
         "vote_bad": 0
@@ -107,6 +120,7 @@
         "user_id": "467841",
         "nickname": "건즈앤로지스",
         "reply_nick": null,
+        "comment_id": "2420453",
         "comment_body": "ㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -119,7 +133,7 @@
     "title": "우리늑애 두4천개로 롤이랑 동의게임중인데",
     "url": "https://ygosu.com/board/pan_monstarz/1136168",
     "listing_date": "26.03.19",
-    "views": 199,
+    "views": 201,
     "recommend": 1,
     "comment_count": 3,
     "is_blinded": false,
@@ -127,11 +141,14 @@
     "listing_datetime": "2026-03-19 02:27:09",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "672378",
         "nickname": "wannabe",
         "reply_nick": null,
+        "comment_id": "2420325",
         "comment_body": "늑어게인",
         "vote_good": 1,
         "vote_bad": 0
@@ -140,6 +157,7 @@
         "user_id": "605233",
         "nickname": "와르가르",
         "reply_nick": null,
+        "comment_id": "2420329",
         "comment_body": "자퇴하랑께",
         "vote_good": 1,
         "vote_bad": 0
@@ -148,6 +166,7 @@
         "user_id": "518781",
         "nickname": "쿠사리줘",
         "reply_nick": null,
+        "comment_id": "2420331",
         "comment_body": "늑애는 오면 환영인데 아쉽누",
         "vote_good": 1,
         "vote_bad": 0
@@ -160,7 +179,7 @@
     "title": "갑자기 씨발 스타대학 ㅈ같네?",
     "url": "https://ygosu.com/board/pan_monstarz/1136051",
     "listing_date": "26.03.19",
-    "views": 1200,
+    "views": 1203,
     "recommend": 16,
     "comment_count": 9,
     "is_blinded": false,
@@ -168,11 +187,14 @@
     "listing_datetime": "2026-03-19 02:11:04",
     "good_vote": 16,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "697800",
         "nickname": "암재인",
         "reply_nick": null,
+        "comment_id": "2420133",
         "comment_body": "썩킹 썰 좀",
         "vote_good": 0,
         "vote_bad": 0
@@ -181,6 +203,7 @@
         "user_id": "655139",
         "nickname": "이런병신같은빌드",
         "reply_nick": null,
+        "comment_id": "2420137",
         "comment_body": "왜 갑자기 회남?",
         "vote_good": 1,
         "vote_bad": 0
@@ -189,6 +212,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@이런병신같은빌드",
+        "comment_id": "2420152",
         "comment_body": "@이런병신같은빌드박하악 헨타이 볼라했는데\n\n돈없어서ㅇㅇ 베스트 댓글",
         "vote_good": 14,
         "vote_bad": 1
@@ -197,6 +221,7 @@
         "user_id": "705134",
         "nickname": "츠암토가보자",
         "reply_nick": "@늑애",
+        "comment_id": "2420154",
         "comment_body": "@늑애",
         "vote_good": 1,
         "vote_bad": 0
@@ -205,6 +230,7 @@
         "user_id": "479096",
         "nickname": "좋버그",
         "reply_nick": null,
+        "comment_id": "2420146",
         "comment_body": "새삼스럽게 왜그러노",
         "vote_good": 1,
         "vote_bad": 0
@@ -213,6 +239,7 @@
         "user_id": "705019",
         "nickname": "안다은",
         "reply_nick": null,
+        "comment_id": "2420153",
         "comment_body": "썩킹썰좀요",
         "vote_good": 0,
         "vote_bad": 0
@@ -221,6 +248,7 @@
         "user_id": "704186",
         "nickname": "어ㅡㅡㅡ흥",
         "reply_nick": null,
+        "comment_id": "2420157",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -229,6 +257,7 @@
         "user_id": "518650",
         "nickname": "함바짐사장유나니",
         "reply_nick": null,
+        "comment_id": "2420167",
         "comment_body": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ진짜 생산성 존나 없긴하노....",
         "vote_good": 2,
         "vote_bad": 0
@@ -237,6 +266,7 @@
         "user_id": "628179",
         "nickname": "시드니의별",
         "reply_nick": null,
+        "comment_id": "2420362",
         "comment_body": "케이대에서 나와라그럼",
         "vote_good": 0,
         "vote_bad": 0
@@ -249,7 +279,7 @@
     "title": "이번엔 썩킹 부정적 얘기를해줄게ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1134405",
     "listing_date": "26.03.19",
-    "views": 1234,
+    "views": 1239,
     "recommend": 33,
     "comment_count": 15,
     "is_blinded": false,
@@ -257,11 +287,14 @@
     "listing_datetime": "2026-03-19 00:17:59",
     "good_vote": 33,
     "bad_vote": 1,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "701976",
         "nickname": "진땅콩",
         "reply_nick": null,
+        "comment_id": "2418693",
         "comment_body": "씨발",
         "vote_good": 3,
         "vote_bad": 1
@@ -270,6 +303,7 @@
         "user_id": "703365",
         "nickname": "유난이삐져또",
         "reply_nick": null,
+        "comment_id": "2418696",
         "comment_body": "미친련이긴하네 ㄹ.ㅇ",
         "vote_good": 3,
         "vote_bad": 1
@@ -278,6 +312,7 @@
         "user_id": "699928",
         "nickname": "츠캄토몬스타즈",
         "reply_nick": null,
+        "comment_id": "2418698",
         "comment_body": "ㅈ같네",
         "vote_good": 2,
         "vote_bad": 0
@@ -286,6 +321,7 @@
         "user_id": "697800",
         "nickname": "암재인",
         "reply_nick": null,
+        "comment_id": "2418699",
         "comment_body": "늑애 왔구나 ㅠㅠ 찾았음 썰좀 더 풀어줘 ㅠㅠㅠ",
         "vote_good": 3,
         "vote_bad": 0
@@ -294,6 +330,7 @@
         "user_id": "705074",
         "nickname": "유사야수",
         "reply_nick": null,
+        "comment_id": "2418702",
         "comment_body": "이걸 아는 사람이 있네",
         "vote_good": 3,
         "vote_bad": 1
@@ -302,6 +339,7 @@
         "user_id": "700425",
         "nickname": "캄암암캄",
         "reply_nick": null,
+        "comment_id": "2418709",
         "comment_body": "",
         "vote_good": 2,
         "vote_bad": 0
@@ -310,6 +348,7 @@
         "user_id": "703418",
         "nickname": "낭냥낭냥",
         "reply_nick": null,
+        "comment_id": "2418712",
         "comment_body": "펀딩은 안나온다고 즙짜는데 갠방풍은 20만개씩 꾸준함 베스트 댓글",
         "vote_good": 16,
         "vote_bad": 0
@@ -318,6 +357,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@낭냥낭냥",
+        "comment_id": "2418845",
         "comment_body": "@낭냥낭냥ㄹㅇ 돼돌이 성인군자임\n\n자기가 맨날 2~4배 들고오는데 월풍이 비슷함ㅇㅇㅋㅋ 베스트 댓글",
         "vote_good": 8,
         "vote_bad": 0
@@ -326,6 +366,7 @@
         "user_id": "704186",
         "nickname": "어ㅡㅡㅡ흥",
         "reply_nick": null,
+        "comment_id": "2418714",
         "comment_body": "ㅘ",
         "vote_good": 0,
         "vote_bad": 0
@@ -334,6 +375,7 @@
         "user_id": "703259",
         "nickname": "종자도주님",
         "reply_nick": null,
+        "comment_id": "2418716",
         "comment_body": "우리하고 진짜 안맞겠네. 베스트 댓글",
         "vote_good": 5,
         "vote_bad": 1
@@ -342,6 +384,7 @@
         "user_id": "691375",
         "nickname": "스팀어222",
         "reply_nick": null,
+        "comment_id": "2418741",
         "comment_body": "스대게 10페이지 피쌀사건인데",
         "vote_good": 4,
         "vote_bad": 0
@@ -350,6 +393,7 @@
         "user_id": "705019",
         "nickname": "안다은",
         "reply_nick": null,
+        "comment_id": "2418762",
         "comment_body": "정확히 부천행동이네",
         "vote_good": 4,
         "vote_bad": 0
@@ -358,6 +402,7 @@
         "user_id": "490202",
         "nickname": "핫식스2",
         "reply_nick": null,
+        "comment_id": "2418782",
         "comment_body": "아 진짜 개좆같네 씨벌",
         "vote_good": 2,
         "vote_bad": 0
@@ -366,6 +411,7 @@
         "user_id": "542179",
         "nickname": "술좋아하는사람",
         "reply_nick": null,
+        "comment_id": "2418969",
         "comment_body": "사대가 안맞는다 그냥",
         "vote_good": 0,
         "vote_bad": 0
@@ -374,6 +420,7 @@
         "user_id": "541771",
         "nickname": "ltIlIjltl",
         "reply_nick": null,
+        "comment_id": "2419297",
         "comment_body": "원래 부천 대학만 전전할 친구인데 운좋게 거성대를 케이가 인수해서 계속 눌러 앉은 케이스지",
         "vote_good": 2,
         "vote_bad": 0
@@ -386,7 +433,7 @@
     "title": "근데 찌킹 츠캄가면 다를수도있긴하노 ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1134337",
     "listing_date": "26.03.19",
-    "views": 242,
+    "views": 245,
     "recommend": 0,
     "comment_count": 4,
     "is_blinded": false,
@@ -394,11 +441,14 @@
     "listing_datetime": "2026-03-19 00:08:42",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "705074",
         "nickname": "유사야수",
         "reply_nick": null,
+        "comment_id": "2418496",
         "comment_body": "그럴 거면 여캠을",
         "vote_good": 0,
         "vote_bad": 0
@@ -407,6 +457,7 @@
         "user_id": "678199",
         "nickname": "408주종발효",
         "reply_nick": null,
+        "comment_id": "2418506",
         "comment_body": "정선가서 하라고해 필요없으니까 베스트 댓글",
         "vote_good": 5,
         "vote_bad": 0
@@ -415,6 +466,7 @@
         "user_id": "527822",
         "nickname": "계회",
         "reply_nick": null,
+        "comment_id": "2418519",
         "comment_body": "ㅅㅂ",
         "vote_good": 0,
         "vote_bad": 0
@@ -423,6 +475,7 @@
         "user_id": "702769",
         "nickname": "암경민",
         "reply_nick": null,
+        "comment_id": "2418588",
         "comment_body": "열혈한테 카톡주는건 1도 필요없음 ㄹㅇ",
         "vote_good": 0,
         "vote_bad": 0
@@ -435,7 +488,7 @@
     "title": "니네 ㄹㅇ 찌킹받게되면 제일못견디는게",
     "url": "https://ygosu.com/board/pan_monstarz/1131690",
     "listing_date": "26.03.18",
-    "views": 212,
+    "views": 214,
     "recommend": 7,
     "comment_count": 4,
     "is_blinded": false,
@@ -443,11 +496,14 @@
     "listing_datetime": "2026-03-18 18:04:36",
     "good_vote": 7,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "701343",
         "nickname": "디즐라이",
         "reply_nick": null,
+        "comment_id": "2414793",
         "comment_body": "두창이노 ㅅㅂ 베스트 댓글",
         "vote_good": 5,
         "vote_bad": 0
@@ -456,6 +512,7 @@
         "user_id": "701976",
         "nickname": "진땅콩",
         "reply_nick": null,
+        "comment_id": "2414801",
         "comment_body": "아 제발 진짜 안된다고",
         "vote_good": 0,
         "vote_bad": 0
@@ -464,6 +521,7 @@
         "user_id": "658591",
         "nickname": "라큰롤베이베",
         "reply_nick": null,
+        "comment_id": "2414802",
         "comment_body": "ㄹㅇ",
         "vote_good": 0,
         "vote_bad": 0
@@ -472,6 +530,7 @@
         "user_id": "704186",
         "nickname": "어ㅡㅡㅡ흥",
         "reply_nick": null,
+        "comment_id": "2414829",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -484,7 +543,7 @@
     "title": "ㄹㅇ 개병신나오면 다 츠캄임 ㅇㅇ?ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/pan_monstarz/1131269",
     "listing_date": "26.03.18",
-    "views": 123,
+    "views": 127,
     "recommend": 0,
     "comment_count": 1,
     "is_blinded": false,
@@ -492,11 +551,14 @@
     "listing_datetime": "2026-03-18 17:37:54",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "695606",
         "nickname": "털애기",
         "reply_nick": null,
+        "comment_id": "2414265",
         "comment_body": "밈됨 ㅅㅂ",
         "vote_good": 0,
         "vote_bad": 0
@@ -509,7 +571,7 @@
     "title": "썩어야 제발... 나 부랄떨려ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1130906",
     "listing_date": "26.03.18",
-    "views": 241,
+    "views": 242,
     "recommend": 8,
     "comment_count": 3,
     "is_blinded": false,
@@ -517,11 +579,14 @@
     "listing_datetime": "2026-03-18 17:01:47",
     "good_vote": 8,
     "bad_vote": 1,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "702769",
         "nickname": "암경민",
         "reply_nick": null,
+        "comment_id": "2413674",
         "comment_body": "제발제발제발제발제발제발제발제발",
         "vote_good": 1,
         "vote_bad": 0
@@ -530,6 +595,7 @@
         "user_id": "701306",
         "nickname": "uhheung",
         "reply_nick": null,
+        "comment_id": "2413694",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -538,6 +604,7 @@
         "user_id": "696535",
         "nickname": "Brain",
         "reply_nick": null,
+        "comment_id": "2413781",
         "comment_body": "뽀뇨라며 발표안난거였농",
         "vote_good": 0,
         "vote_bad": 0
@@ -550,7 +617,7 @@
     "title": "타밍아 09년 아발론msl 우승경기보자<<< 도배해도되냐?",
     "url": "https://ygosu.com/board/pan_monstarz/1123926",
     "listing_date": "26.03.17",
-    "views": 122,
+    "views": 123,
     "recommend": 1,
     "comment_count": 7,
     "is_blinded": false,
@@ -558,11 +625,14 @@
     "listing_datetime": "2026-03-17 17:33:48",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "701306",
         "nickname": "uhheung",
         "reply_nick": null,
+        "comment_id": "2398602",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -571,6 +641,7 @@
         "user_id": "701976",
         "nickname": "진땅콩",
         "reply_nick": null,
+        "comment_id": "2398604",
         "comment_body": "씨발아",
         "vote_good": 0,
         "vote_bad": 0
@@ -579,6 +650,7 @@
         "user_id": "669079",
         "nickname": "개발환",
         "reply_nick": null,
+        "comment_id": "2398606",
         "comment_body": "아 ㅅㅂ",
         "vote_good": 0,
         "vote_bad": 0
@@ -587,6 +659,7 @@
         "user_id": "381361",
         "nickname": "초로기",
         "reply_nick": null,
+        "comment_id": "2398608",
         "comment_body": "ㄱㄱㄱㄱㄱ돌격",
         "vote_good": 0,
         "vote_bad": 0
@@ -595,6 +668,7 @@
         "user_id": "702769",
         "nickname": "암경민",
         "reply_nick": null,
+        "comment_id": "2398609",
         "comment_body": "ㅋㅋㅋㅋㅋ 늑애는 풀로 시청했노? ㅋㅋㅋㅋㅋ ㅅㅂ 늑애는 김성여대에서 합병된거라 기억이 안나네",
         "vote_good": 0,
         "vote_bad": 0
@@ -603,6 +677,7 @@
         "user_id": "704186",
         "nickname": "먼퀴보이면피쌈",
         "reply_nick": null,
+        "comment_id": "2398612",
         "comment_body": "늑채보러가 씨발아ㅠㅠ",
         "vote_good": 0,
         "vote_bad": 0
@@ -611,6 +686,7 @@
         "user_id": "699712",
         "nickname": "유난떨지마라",
         "reply_nick": null,
+        "comment_id": "2398665",
         "comment_body": "그건 아리송이한테 ㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -623,7 +699,7 @@
     "title": "씹환이는 이런거안하냐 ㅇㅇ?",
     "url": "https://ygosu.com/board/pan_monstarz/1122042",
     "listing_date": "26.03.17",
-    "views": 165,
+    "views": 166,
     "recommend": 1,
     "comment_count": 7,
     "is_blinded": false,
@@ -631,11 +707,14 @@
     "listing_datetime": "2026-03-17 01:41:45",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "702716",
         "nickname": "병harris신",
         "reply_nick": null,
+        "comment_id": "2391433",
         "comment_body": "바이럴 ㄴㄴ",
         "vote_good": 0,
         "vote_bad": 0
@@ -644,6 +723,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@병harris신",
+        "comment_id": "2391442",
         "comment_body": "@병harris신내가 총보성 바이럴을 왜하노 ㅇㅇㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -652,6 +732,7 @@
         "user_id": "697833",
         "nickname": "나의영웅츠암종",
         "reply_nick": null,
+        "comment_id": "2391436",
         "comment_body": "할만할듯? 뭐 할거없으면",
         "vote_good": 0,
         "vote_bad": 0
@@ -660,6 +741,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@나의영웅츠암종",
+        "comment_id": "2391448",
         "comment_body": "@나의영웅츠암종쪽지낙수 ㄱㄱ해보라노\n\n이거보고 하는새끼들은 늑어필 한마디씩 해주고ㅇㅇ",
         "vote_good": 0,
         "vote_bad": 0
@@ -668,6 +750,7 @@
         "user_id": "701976",
         "nickname": "진땅콩",
         "reply_nick": null,
+        "comment_id": "2391440",
         "comment_body": "지맘이지 뭐",
         "vote_good": 0,
         "vote_bad": 0
@@ -676,6 +759,7 @@
         "user_id": "705134",
         "nickname": "츠암토가보자",
         "reply_nick": null,
+        "comment_id": "2391441",
         "comment_body": "예전 배그멸망전은 볼만했는데 암햄",
         "vote_good": 0,
         "vote_bad": 0
@@ -684,6 +768,7 @@
         "user_id": "696535",
         "nickname": "Brain",
         "reply_nick": null,
+        "comment_id": "2391463",
         "comment_body": "늑쇼 배그 못하자농",
         "vote_good": 0,
         "vote_bad": 0
@@ -696,7 +781,7 @@
     "title": "ㄹㅇ체급큰새끼가와서 썩대 뺏어주면좋겟네",
     "url": "https://ygosu.com/board/pan_monstarz/1118704",
     "listing_date": "26.03.16",
-    "views": 76,
+    "views": 78,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -704,6 +789,8 @@
     "listing_datetime": "2026-03-16 18:49:59",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -712,7 +799,7 @@
     "title": "니네지금 (타구장)하고 노는거 유스임 ㅇㅇ?ㅋㅋㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/pan_monstarz/1117208",
     "listing_date": "26.03.16",
-    "views": 228,
+    "views": 229,
     "recommend": 2,
     "comment_count": 2,
     "is_blinded": false,
@@ -720,11 +807,14 @@
     "listing_datetime": "2026-03-16 14:42:42",
     "good_vote": 2,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "666527",
         "nickname": "크리시포스",
         "reply_nick": null,
+        "comment_id": "2382595",
         "comment_body": "누가봐도 최상등급 검투사처럼 생겼는데 검 못들까봐 예민해져있음",
         "vote_good": 0,
         "vote_bad": 0
@@ -733,6 +823,7 @@
         "user_id": "701188",
         "nickname": "치리잘좀하자",
         "reply_nick": null,
+        "comment_id": "2382627",
         "comment_body": "애새끼 교육중임",
         "vote_good": 0,
         "vote_bad": 0
@@ -745,7 +836,7 @@
     "title": "눈팅중인 썩어견있으면 도움좀 제발",
     "url": "https://ygosu.com/board/pan_monstarz/1115901",
     "listing_date": "26.03.16",
-    "views": 195,
+    "views": 197,
     "recommend": 2,
     "comment_count": 3,
     "is_blinded": false,
@@ -753,11 +844,14 @@
     "listing_datetime": "2026-03-16 03:34:54",
     "good_vote": 2,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "628179",
         "nickname": "시드니의별",
         "reply_nick": null,
+        "comment_id": "2377356",
         "comment_body": "모름",
         "vote_good": 0,
         "vote_bad": 0
@@ -766,6 +860,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@시드니의별",
+        "comment_id": "2377372",
         "comment_body": "@시드니의별방송보는중?\n\n왜 안오는지 말안함? ㅇㅇ",
         "vote_good": 0,
         "vote_bad": 0
@@ -774,6 +869,7 @@
         "user_id": "702769",
         "nickname": "암경민",
         "reply_nick": null,
+        "comment_id": "2377381",
         "comment_body": "츠캄오는중~",
         "vote_good": 1,
         "vote_bad": 1
@@ -786,7 +882,7 @@
     "title": "펨베에 구루미 억까 생기면 나임ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1112423",
     "listing_date": "26.03.15",
-    "views": 220,
+    "views": 222,
     "recommend": 2,
     "comment_count": 9,
     "is_blinded": false,
@@ -794,11 +890,14 @@
     "listing_datetime": "2026-03-15 20:58:31",
     "good_vote": 2,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "622695",
         "nickname": "하드맨",
         "reply_nick": null,
+        "comment_id": "2371215",
         "comment_body": "ㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -807,6 +906,7 @@
         "user_id": "513725",
         "nickname": "랑땅토모치",
         "reply_nick": null,
+        "comment_id": "2371219",
         "comment_body": "ㅈㄴ 이쁘네 유스 ㅅㅂ 스대게는 쟤보고 노짱관상이라고햇는디 ㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 1,
         "vote_bad": 1
@@ -815,6 +915,7 @@
         "user_id": "701306",
         "nickname": "uhheung",
         "reply_nick": null,
+        "comment_id": "2371220",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -823,6 +924,7 @@
         "user_id": "705050",
         "nickname": "해방의전사김윤환",
         "reply_nick": null,
+        "comment_id": "2371222",
         "comment_body": "성인들 관계에서 이게 있을수 잇는 일인가연.....",
         "vote_good": 0,
         "vote_bad": 0
@@ -831,6 +933,7 @@
         "user_id": "700020",
         "nickname": "세븐스타",
         "reply_nick": null,
+        "comment_id": "2371224",
         "comment_body": "ㅋㅋㅋ늑채 왜이리 해맑냐",
         "vote_good": 1,
         "vote_bad": 0
@@ -839,6 +942,7 @@
         "user_id": "701976",
         "nickname": "진땅콩",
         "reply_nick": null,
+        "comment_id": "2371228",
         "comment_body": "ㅅㅂ",
         "vote_good": 0,
         "vote_bad": 0
@@ -847,6 +951,7 @@
         "user_id": "704186",
         "nickname": "먼퀴보이면피쌈",
         "reply_nick": null,
+        "comment_id": "2371234",
         "comment_body": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 1,
         "vote_bad": 0
@@ -855,6 +960,7 @@
         "user_id": "313793",
         "nickname": "열받은상태",
         "reply_nick": null,
+        "comment_id": "2371243",
         "comment_body": "한번 씩 웃고 앉는게 더 소름 ㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -863,6 +969,7 @@
         "user_id": "702769",
         "nickname": "암경민",
         "reply_nick": null,
+        "comment_id": "2371252",
         "comment_body": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ ㅅㅂ ㅈㄴ웃기네",
         "vote_good": 0,
         "vote_bad": 0
@@ -875,7 +982,7 @@
     "title": "니네 최도랑 안받은 이유 진짜몰라서그럼 ㅇㅇ?",
     "url": "https://ygosu.com/board/pan_monstarz/1109930",
     "listing_date": "26.03.15",
-    "views": 249,
+    "views": 251,
     "recommend": 2,
     "comment_count": 4,
     "is_blinded": false,
@@ -883,11 +990,14 @@
     "listing_datetime": "2026-03-15 15:30:22",
     "good_vote": 2,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "647893",
         "nickname": "킹윤환",
         "reply_nick": null,
+        "comment_id": "2366002",
         "comment_body": "나오긴 하니? 베스트 댓글",
         "vote_good": 4,
         "vote_bad": 0
@@ -896,6 +1006,7 @@
         "user_id": "527822",
         "nickname": "계회",
         "reply_nick": null,
+        "comment_id": "2366011",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -904,6 +1015,7 @@
         "user_id": "702769",
         "nickname": "암경민",
         "reply_nick": null,
+        "comment_id": "2366016",
         "comment_body": "제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발제발",
         "vote_good": 0,
         "vote_bad": 0
@@ -912,6 +1024,7 @@
         "user_id": "622695",
         "nickname": "하드맨",
         "reply_nick": null,
+        "comment_id": "2366045",
         "comment_body": "케이대에서 영구결번수준임 경기도안나오고 풍은존나받고",
         "vote_good": 0,
         "vote_bad": 0
@@ -924,7 +1037,7 @@
     "title": "근데 씹환이 영입곤조 ㄹㅇ 이정도냐?",
     "url": "https://ygosu.com/board/pan_monstarz/1109391",
     "listing_date": "26.03.15",
-    "views": 724,
+    "views": 727,
     "recommend": 14,
     "comment_count": 4,
     "is_blinded": false,
@@ -932,11 +1045,14 @@
     "listing_datetime": "2026-03-15 14:48:50",
     "good_vote": 14,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "",
         "nickname": "",
         "reply_nick": null,
+        "comment_id": "",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -945,6 +1061,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@암게이함",
+        "comment_id": "2365237",
         "comment_body": "@암게이함가끔 복창터질만하노ㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -953,6 +1070,7 @@
         "user_id": "691887",
         "nickname": "랑애",
         "reply_nick": null,
+        "comment_id": "2365231",
         "comment_body": "매우높은확률 ㄹㅇ 베스트 댓글",
         "vote_good": 11,
         "vote_bad": 0
@@ -961,6 +1079,7 @@
         "user_id": "201090",
         "nickname": "전자깡패",
         "reply_nick": null,
+        "comment_id": "2365238",
         "comment_body": "ㄹ.ㅇ 안할듯",
         "vote_good": 0,
         "vote_bad": 0
@@ -969,6 +1088,7 @@
         "user_id": "699712",
         "nickname": "유난떨지마라",
         "reply_nick": null,
+        "comment_id": "2365242",
         "comment_body": "마토급도 겹치면 안봣는다고 보면 됨",
         "vote_good": 2,
         "vote_bad": 0
@@ -981,7 +1101,7 @@
     "title": "살치대도 ㄹㅇ 몹쓸곳이노 ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1109375",
     "listing_date": "26.03.15",
-    "views": 154,
+    "views": 155,
     "recommend": 2,
     "comment_count": 1,
     "is_blinded": false,
@@ -989,11 +1109,14 @@
     "listing_datetime": "2026-03-15 14:44:14",
     "good_vote": 2,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "700166",
         "nickname": "으이아악",
         "reply_nick": null,
+        "comment_id": "2365206",
         "comment_body": "그냥 다방송하는거지 ㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1006,7 +1129,7 @@
     "title": "다른곳도 다 뉴걸오면 펀딩 상위권 시켜주냐?ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1086012",
     "listing_date": "26.03.11",
-    "views": 152,
+    "views": 154,
     "recommend": 2,
     "comment_count": 3,
     "is_blinded": false,
@@ -1014,11 +1137,14 @@
     "listing_datetime": "2026-03-11 22:31:19",
     "good_vote": 2,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "",
         "nickname": "",
         "reply_nick": null,
+        "comment_id": "",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -1027,6 +1153,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@ApdoGod",
+        "comment_id": "2310326",
         "comment_body": "@ApdoGod이게 크긴한듯ㅇㅇ\n\n연간 방송시간도르로 억까라고 정색해서\n\n놀리러오지도않음......",
         "vote_good": 0,
         "vote_bad": 0
@@ -1035,6 +1162,7 @@
         "user_id": "678199",
         "nickname": "408주종발효",
         "reply_nick": null,
+        "comment_id": "2310301",
         "comment_body": "갠방 풍쏴줄바엔 그게낫지",
         "vote_good": 0,
         "vote_bad": 0
@@ -1043,6 +1171,7 @@
         "user_id": "331933",
         "nickname": "sunrise5",
         "reply_nick": null,
+        "comment_id": "2310327",
         "comment_body": "늑돼는 알아서 잘 받잖아",
         "vote_good": 0,
         "vote_bad": 0
@@ -1055,7 +1184,7 @@
     "title": "썩어는 근데 썩수 왜이렇게무시했다냐 ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1084795",
     "listing_date": "26.03.11",
-    "views": 180,
+    "views": 181,
     "recommend": 1,
     "comment_count": 2,
     "is_blinded": false,
@@ -1063,11 +1192,14 @@
     "listing_datetime": "2026-03-11 19:51:26",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "702769",
         "nickname": "암경민",
         "reply_nick": null,
+        "comment_id": "2307222",
         "comment_body": "능력있지 ㄹㅇ",
         "vote_good": 1,
         "vote_bad": 0
@@ -1076,6 +1208,7 @@
         "user_id": "518650",
         "nickname": "함바짐사장유나니",
         "reply_nick": null,
+        "comment_id": "2307238",
         "comment_body": "풍이 없으니 뭐ㅋㅋㅋㅋ 싸룸은 결국 풍이 최고 아니노",
         "vote_good": 0,
         "vote_bad": 0
@@ -1088,7 +1221,7 @@
     "title": "늑애 씹환이보고 뒤질라함ㅇㅇㅋㅋㅋㅋㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/pan_monstarz/1084326",
     "listing_date": "26.03.11",
-    "views": 840,
+    "views": 842,
     "recommend": 20,
     "comment_count": 5,
     "is_blinded": false,
@@ -1096,11 +1229,14 @@
     "listing_datetime": "2026-03-11 19:05:57",
     "good_vote": 20,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "647893",
         "nickname": "킹윤환",
         "reply_nick": null,
+        "comment_id": "2306634",
         "comment_body": "ㅠㅠ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1109,6 +1245,7 @@
         "user_id": "691887",
         "nickname": "랑애",
         "reply_nick": null,
+        "comment_id": "2306636",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -1117,6 +1254,7 @@
         "user_id": "703621",
         "nickname": "imnotningning",
         "reply_nick": null,
+        "comment_id": "2306638",
         "comment_body": "ㅜㅜ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1125,6 +1263,7 @@
         "user_id": "381361",
         "nickname": "초로기",
         "reply_nick": null,
+        "comment_id": "2306640",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -1133,6 +1272,7 @@
         "user_id": "527822",
         "nickname": "계회",
         "reply_nick": null,
+        "comment_id": "2306648",
         "comment_body": "늑애 윤환 짤 업데이트좀",
         "vote_good": 0,
         "vote_bad": 0
@@ -1145,7 +1285,7 @@
     "title": "풍유란팬있으면 미안한데 너네좀심함ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1080952",
     "listing_date": "26.03.11",
-    "views": 196,
+    "views": 197,
     "recommend": 1,
     "comment_count": 3,
     "is_blinded": false,
@@ -1153,11 +1293,14 @@
     "listing_datetime": "2026-03-11 03:23:49",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "702769",
         "nickname": "암경민",
         "reply_nick": null,
+        "comment_id": "2296801",
         "comment_body": "그런건 알빠ㄴ고 늑애좀 빼오라고 씨발 ㄹㅇ",
         "vote_good": 2,
         "vote_bad": 0
@@ -1166,6 +1309,7 @@
         "user_id": "702745",
         "nickname": "나의어부씹환이",
         "reply_nick": null,
+        "comment_id": "2296808",
         "comment_body": "늑애 빼와라",
         "vote_good": 1,
         "vote_bad": 0
@@ -1174,6 +1318,7 @@
         "user_id": "518650",
         "nickname": "함바짐사장유나니",
         "reply_nick": null,
+        "comment_id": "2296810",
         "comment_body": "풍유란퀴는 여기 없지 ㄹㅇ 숨쉬듯 맞는데. 그래서 늑애 거기서 행복하냐...",
         "vote_good": 0,
         "vote_bad": 0
@@ -1186,7 +1331,7 @@
     "title": "뉴캣슬 리빌딩 ㅈㄴ부럽노",
     "url": "https://ygosu.com/board/pan_monstarz/1080355",
     "listing_date": "26.03.11",
-    "views": 365,
+    "views": 367,
     "recommend": 4,
     "comment_count": 9,
     "is_blinded": false,
@@ -1194,11 +1339,14 @@
     "listing_datetime": "2026-03-11 02:04:01",
     "good_vote": 4,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "700572",
         "nickname": "김윤환밀리팬",
         "reply_nick": null,
+        "comment_id": "2294879",
         "comment_body": "어디?",
         "vote_good": 0,
         "vote_bad": 0
@@ -1207,6 +1355,7 @@
         "user_id": "479096",
         "nickname": "좋버그",
         "reply_nick": null,
+        "comment_id": "2294882",
         "comment_body": "썩대는 괜찮은거 아니노?",
         "vote_good": 0,
         "vote_bad": 0
@@ -1215,6 +1364,7 @@
         "user_id": "560510",
         "nickname": "밍마루",
         "reply_nick": null,
+        "comment_id": "2294884",
         "comment_body": "케이대가 리빌딩이 필요해?",
         "vote_good": 0,
         "vote_bad": 0
@@ -1223,6 +1373,7 @@
         "user_id": "699928",
         "nickname": "츠캄토몬스타즈",
         "reply_nick": null,
+        "comment_id": "2294893",
         "comment_body": "썩어햄이 필사적으로 붙잡는다며 언해피뜨면 ㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1231,6 +1382,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@츠캄토몬스타즈",
+        "comment_id": "2294960",
         "comment_body": "@츠캄토몬스타즈가뜩이나 가스라이팅해서 대기업가는거 겁많은데\n\n마음먹고 행동하려하면 무안할정도로 잡는듯\n\n자동이썰만봐도\n\n한시즌 한대회만 더 대회끝났으니 쉬다가 엠티만가고\n\n이런식으로 ㅈㄴ 처잡는거같음ㅇㅇ",
         "vote_good": 1,
         "vote_bad": 0
@@ -1239,6 +1391,7 @@
         "user_id": "690192",
         "nickname": "나의영웅고블린",
         "reply_nick": null,
+        "comment_id": "2294896",
         "comment_body": "쳐낼사람도 없잖아 거긴",
         "vote_good": 1,
         "vote_bad": 0
@@ -1247,6 +1400,7 @@
         "user_id": "622695",
         "nickname": "하드맨",
         "reply_nick": null,
+        "comment_id": "2294903",
         "comment_body": "늑채 츠캄오면 니 츠캄안티된다니까 ㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1255,6 +1409,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@하드맨",
+        "comment_id": "2295043",
         "comment_body": "@하드맨니네가 늑애 똥싸대니까\n\n필요없다고 꺼지란말에 긁혀서\n\n스대게 한줌새끼들 그래봤자\n\n츠캄찐팬들은 늑채좋아한다고 배설후\n\n정지먹고 와접당하는게 꿈임ㅇㅇ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1263,6 +1418,7 @@
         "user_id": "622695",
         "nickname": "하드맨",
         "reply_nick": "@늑애",
+        "comment_id": "2295052",
         "comment_body": "@늑애ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1275,7 +1431,7 @@
     "title": "내일 제갈량 후손년 리딸오면 가야겟노ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1080163",
     "listing_date": "26.03.11",
-    "views": 71,
+    "views": 72,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -1283,6 +1439,8 @@
     "listing_datetime": "2026-03-11 01:54:03",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -1291,7 +1449,7 @@
     "title": "썩어야 멤버들 낙수 올릴방법이나 생각해라 시발ㅋㅋ",
     "url": "https://ygosu.com/board/pan_monstarz/1074875",
     "listing_date": "26.03.10",
-    "views": 253,
+    "views": 254,
     "recommend": 5,
     "comment_count": 7,
     "is_blinded": false,
@@ -1299,11 +1457,14 @@
     "listing_datetime": "2026-03-10 15:44:44",
     "good_vote": 5,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "700926",
         "nickname": "췌이메이",
         "reply_nick": null,
+        "comment_id": "2287283",
         "comment_body": "그런거 신경쓸새끼노",
         "vote_good": 2,
         "vote_bad": 0
@@ -1312,6 +1473,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@췌이메이",
+        "comment_id": "2287293",
         "comment_body": "@췌이메이ㅈㄴ패고싶음 ㅇㅇㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ\n\n저게 진정한 의미의 캣맘아니냐?\n\n책임없이 길거리에 사료랑 츄르흩뿌려댐ㅇㅇㅋㅋㅋ\n\n계속주면 몰라 한번주고 그주변 사냥하라함",
         "vote_good": 1,
         "vote_bad": 0
@@ -1320,6 +1482,7 @@
         "user_id": "518650",
         "nickname": "함바짐사장유나니",
         "reply_nick": null,
+        "comment_id": "2287287",
         "comment_body": "ㅋㅋㅋㅋㅋㅋㅋㅋ간만이농ㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1328,6 +1491,7 @@
         "user_id": "647459",
         "nickname": "윤환의검",
         "reply_nick": null,
+        "comment_id": "2287289",
         "comment_body": "채린이 팬인가요?",
         "vote_good": 2,
         "vote_bad": 0
@@ -1336,6 +1500,7 @@
         "user_id": "696988",
         "nickname": "현정2",
         "reply_nick": null,
+        "comment_id": "2287291",
         "comment_body": "ㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1344,6 +1509,7 @@
         "user_id": "704186",
         "nickname": "먼퀴보이면피쌈",
         "reply_nick": null,
+        "comment_id": "2287297",
         "comment_body": "ㅎㅇ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1352,6 +1518,7 @@
         "user_id": "605233",
         "nickname": "와르가르",
         "reply_nick": null,
+        "comment_id": "2287313",
         "comment_body": "오랜만이노",
         "vote_good": 0,
         "vote_bad": 0
@@ -1364,7 +1531,7 @@
     "title": "썩어견인데) 오늘 이벤트성 페럴림픽 경기임 ㅇㅇ?",
     "url": "https://ygosu.com/board/pan_monstarz/1053195",
     "listing_date": "26.03.04",
-    "views": 93,
+    "views": 94,
     "recommend": 1,
     "comment_count": 2,
     "is_blinded": false,
@@ -1372,11 +1539,14 @@
     "listing_datetime": "2026-03-04 19:33:53",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "696522",
         "nickname": "땅아가",
         "reply_nick": null,
+        "comment_id": "2250470",
         "comment_body": "때리지마라 ㅅㅂ럼아",
         "vote_good": 0,
         "vote_bad": 0
@@ -1385,6 +1555,7 @@
         "user_id": "703458",
         "nickname": "BJ열심히할게요",
         "reply_nick": null,
+        "comment_id": "2250480",
         "comment_body": "오랫만이네",
         "vote_good": 0,
         "vote_bad": 0
@@ -1397,7 +1568,7 @@
     "title": "마포서대문 사는새끼들 지리는짱개집 하나알려줌ㅇㅇ",
     "url": "https://ygosu.com/board/pan_monstarz/1041516",
     "listing_date": "26.03.01",
-    "views": 49,
+    "views": 50,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -1405,6 +1576,8 @@
     "listing_datetime": "2026-03-01 20:56:17",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -1413,7 +1586,7 @@
     "title": "썩팥 <<< 리니지에서 우에스기햄 사정없이 팸ㅇㅇㅠ",
     "url": "https://ygosu.com/board/pan_monstarz/1038577",
     "listing_date": "26.02.28",
-    "views": 263,
+    "views": 266,
     "recommend": 3,
     "comment_count": 7,
     "is_blinded": false,
@@ -1421,11 +1594,14 @@
     "listing_datetime": "2026-02-28 20:49:56",
     "good_vote": 3,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "691887",
         "nickname": "랑애",
         "reply_nick": null,
+        "comment_id": "2222492",
         "comment_body": "친해졋노?",
         "vote_good": 1,
         "vote_bad": 0
@@ -1434,6 +1610,7 @@
         "user_id": "684134",
         "nickname": "늑애",
         "reply_nick": "@랑애",
+        "comment_id": "2222501",
         "comment_body": "@랑애인사는하는데\n\n할건해야된다고 ㅈㄴ팸ㅇㅇㅋㅋㅋㅋㅋ",
         "vote_good": 1,
         "vote_bad": 0
@@ -1442,6 +1619,7 @@
         "user_id": "691887",
         "nickname": "랑애",
         "reply_nick": "@늑애",
+        "comment_id": "2222503",
         "comment_body": "@늑애ㅋㅋㅋㅋㅋㅅㅂ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1450,6 +1628,7 @@
         "user_id": "700926",
         "nickname": "췌이메이",
         "reply_nick": null,
+        "comment_id": "2222495",
         "comment_body": "스기햄 좆같은겜 그만하고 다시 츠캄 봐줘",
         "vote_good": 0,
         "vote_bad": 0
@@ -1458,6 +1637,7 @@
         "user_id": "696522",
         "nickname": "땅아가",
         "reply_nick": null,
+        "comment_id": "2222497",
         "comment_body": "암아가 후원한다고 스펙 딸렷노 ㅜ.ㅜ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1466,6 +1646,7 @@
         "user_id": "703365",
         "nickname": "유난이삐져또",
         "reply_nick": null,
+        "comment_id": "2222499",
         "comment_body": "씹년들이노",
         "vote_good": 0,
         "vote_bad": 0
@@ -1474,6 +1655,7 @@
         "user_id": "697867",
         "nickname": "뚝갈통",
         "reply_nick": null,
+        "comment_id": "2222513",
         "comment_body": "ㅅㅂㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1486,7 +1668,7 @@
     "title": "썩지>함바랑 스폰안해야겠다",
     "url": "https://ygosu.com/board/pan_monstarz/1014800",
     "listing_date": "26.02.21",
-    "views": 285,
+    "views": 286,
     "recommend": 6,
     "comment_count": 4,
     "is_blinded": false,
@@ -1494,11 +1676,14 @@
     "listing_datetime": "2026-02-21 17:48:46",
     "good_vote": 6,
     "bad_vote": 0,
+    "nickname": "늑애",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "702319",
         "nickname": "계학정학혜학",
         "reply_nick": null,
+        "comment_id": "2171648",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -1507,6 +1692,7 @@
         "user_id": "691887",
         "nickname": "랑애",
         "reply_nick": null,
+        "comment_id": "2171656",
         "comment_body": "ㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -1515,6 +1701,7 @@
         "user_id": "672460",
         "nickname": "프저씹사기",
         "reply_nick": null,
+        "comment_id": "2171657",
         "comment_body": "",
         "vote_good": 1,
         "vote_bad": 0
@@ -1523,6 +1710,7 @@
         "user_id": "704186",
         "nickname": "먼퀴보이면피쌈",
         "reply_nick": null,
+        "comment_id": "2171661",
         "comment_body": "그 다른 저그는 뮤탈미저하는데 조이는 정석한다는 소린가?",
         "vote_good": 0,
         "vote_bad": 0

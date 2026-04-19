@@ -5,7 +5,7 @@
     "title": "용변 ㄹㅇ 본보기로 짤라야하긴해야되는 이유",
     "url": "https://ygosu.com/board/starbbs/13946263",
     "listing_date": "25.04.06",
-    "views": 186,
+    "views": 187,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -13,6 +13,8 @@
     "listing_datetime": "2025-04-06 02:20:33",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -21,7 +23,7 @@
     "title": "<펙트>봉준이 방송이 이제 도움안되는 이유가 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13935060",
     "listing_date": "25.04.04",
-    "views": 188,
+    "views": 189,
     "recommend": 0,
     "comment_count": 2,
     "is_blinded": false,
@@ -29,11 +31,14 @@
     "listing_datetime": "2025-04-04 17:55:56",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "423081",
         "nickname": "황..........제",
         "reply_nick": null,
+        "comment_id": "23664422",
         "comment_body": "ㅇㅇ 다빨림 안가지 이젠",
         "vote_good": 2,
         "vote_bad": 0
@@ -42,6 +47,7 @@
         "user_id": "",
         "nickname": "",
         "reply_nick": null,
+        "comment_id": "",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -50,6 +56,7 @@
         "user_id": "684134",
         "nickname": "김가리가리",
         "reply_nick": "@백열다마",
+        "comment_id": "23664470",
         "comment_body": "@백열다마긁힘 ㅇㅇ?!\n\n이부분 반박해보셈 ㅇㅇ!\n\n유입 유동 없는 태초마을아닌 봉준이 방송은\n\n이미지소모+내수풍만 빨리는 구조인거ㅇㅇ!\n\n왜 ㅣㅣ점 흐리기하려함 ㅇㅇ!?ㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -62,7 +69,7 @@
     "title": "근데 봉준이 키운거 철구 맞지않노 ㅇㅇ!?",
     "url": "https://ygosu.com/board/starbbs/13934989",
     "listing_date": "25.04.04",
-    "views": 160,
+    "views": 161,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -70,6 +77,8 @@
     "listing_datetime": "2025-04-04 17:43:21",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -78,7 +87,7 @@
     "title": "떡만이 순수재미 시발ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13931927",
     "listing_date": "25.04.04",
-    "views": 89,
+    "views": 90,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -86,6 +95,8 @@
     "listing_datetime": "2025-04-04 06:47:30",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -94,7 +105,7 @@
     "title": "근데 KBS는 지금 심정이 어떨까 ㅇㅇ!ㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13931283",
     "listing_date": "25.04.04",
-    "views": 114,
+    "views": 115,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -102,6 +113,8 @@
     "listing_datetime": "2025-04-04 01:32:26",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -110,7 +123,7 @@
     "title": "어차피 전원 곳간풀리고 끝남 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13929169",
     "listing_date": "25.04.03",
-    "views": 62,
+    "views": 63,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -118,6 +131,8 @@
     "listing_datetime": "2025-04-03 23:08:23",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -126,7 +141,7 @@
     "title": "근데 왁햄 선택과집중 잘해야되지않노 ㅇㅇ?!",
     "url": "https://ygosu.com/board/starbbs/13923381",
     "listing_date": "25.04.03",
-    "views": 160,
+    "views": 161,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -134,6 +149,8 @@
     "listing_datetime": "2025-04-03 07:58:15",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -142,7 +159,7 @@
     "title": "근데 노도햄 ㅈ된게 허위사실아니라고 어케증명함ㅇㅇ?!ㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13919531",
     "listing_date": "25.04.02",
-    "views": 84,
+    "views": 85,
     "recommend": 0,
     "comment_count": 1,
     "is_blinded": false,
@@ -150,11 +167,14 @@
     "listing_datetime": "2025-04-02 20:23:24",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "674396",
         "nickname": "패러독쓰",
         "reply_nick": null,
+        "comment_id": "23647693",
         "comment_body": "노도가 썩어 뷰봇 쓴다고 확정적으로 저격한적이 없다 ㅋ이 멍청아 ㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -167,7 +187,7 @@
     "title": "ㄷㄷㄷ석햄 노도 고소선언함 ㅇㅇ!ㅋㅋㅋㅋㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13919501",
     "listing_date": "25.04.02",
-    "views": 102,
+    "views": 103,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -175,6 +195,8 @@
     "listing_datetime": "2025-04-02 20:21:02",
     "good_vote": 0,
     "bad_vote": 1,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -183,7 +205,7 @@
     "title": "킹: 국과수가서 거짓말탐지기해라 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13919265",
     "listing_date": "25.04.02",
-    "views": 68,
+    "views": 69,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -191,6 +213,8 @@
     "listing_datetime": "2025-04-02 19:59:21",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -199,7 +223,7 @@
     "title": "잉이정도면 협상컨텐츠<< 듣자마자 ppt 준비할텐데",
     "url": "https://ygosu.com/board/starbbs/13917592",
     "listing_date": "25.04.02",
-    "views": 262,
+    "views": 263,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -207,6 +231,8 @@
     "listing_datetime": "2025-04-02 15:34:04",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -215,7 +241,7 @@
     "title": "나는 박퍼니가 진짜 ㄹㅇ 불쌍하긴함 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13915091",
     "listing_date": "25.04.02",
-    "views": 179,
+    "views": 180,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -223,6 +249,8 @@
     "listing_datetime": "2025-04-02 01:57:16",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -231,7 +259,7 @@
     "title": "KBS <<담당했던 학생 다음교수가 받으면 항상 경악함ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13914061",
     "listing_date": "25.04.01",
-    "views": 96,
+    "views": 97,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -239,6 +267,8 @@
     "listing_datetime": "2025-04-01 23:20:36",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -247,7 +277,7 @@
     "title": "용변 5,6티어나가면 대체제가 별로라는데",
     "url": "https://ygosu.com/board/starbbs/13909093",
     "listing_date": "25.04.01",
-    "views": 95,
+    "views": 96,
     "recommend": 0,
     "comment_count": 1,
     "is_blinded": false,
@@ -255,11 +285,14 @@
     "listing_datetime": "2025-04-01 14:35:44",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "684638",
         "nickname": "라울콘",
         "reply_nick": null,
+        "comment_id": "23632239",
         "comment_body": "다른대학에서 fa 매물나오겠지 지금은 매물없고 과정이 안 맞지 지금 매물로 비교하는건 뷰러 으냉등등 나올수있고",
         "vote_good": 0,
         "vote_bad": 0
@@ -272,7 +305,7 @@
     "title": "그래도 젖캄보단 용변이 나은 이유가 딱보임 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13909034",
     "listing_date": "25.04.01",
-    "views": 60,
+    "views": 61,
     "recommend": 1,
     "comment_count": 0,
     "is_blinded": false,
@@ -280,6 +313,8 @@
     "listing_datetime": "2025-04-01 14:26:59",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -288,7 +323,7 @@
     "title": "용변물소들이 진짜 알카에다인 이유가 뭐냐면 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13909017",
     "listing_date": "25.04.01",
-    "views": 82,
+    "views": 83,
     "recommend": 0,
     "comment_count": 1,
     "is_blinded": false,
@@ -296,11 +331,14 @@
     "listing_datetime": "2025-04-01 14:23:52",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "324207",
         "nickname": "망삘",
         "reply_nick": null,
+        "comment_id": "23632061",
         "comment_body": "확 자퇴해버려? ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -313,7 +351,7 @@
     "title": "용변 문제가 노답회의로 흘러가는게 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13908849",
     "listing_date": "25.04.01",
-    "views": 63,
+    "views": 64,
     "recommend": 1,
     "comment_count": 0,
     "is_blinded": false,
@@ -321,6 +359,8 @@
     "listing_datetime": "2025-04-01 13:59:04",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -329,7 +369,7 @@
     "title": "빵가 좃된게 용변나가면 진짜 오퍼안올듯ㅇㅇ!ㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13893478",
     "listing_date": "25.03.31",
-    "views": 66,
+    "views": 67,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -337,6 +377,8 @@
     "listing_datetime": "2025-03-31 14:33:32",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -345,7 +387,7 @@
     "title": "노도 썩은 양심있으면 쌈피엘 끝나고 대학해체해야함ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13888974",
     "listing_date": "25.03.31",
-    "views": 80,
+    "views": 81,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -353,6 +395,8 @@
     "listing_datetime": "2025-03-31 04:14:37",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -361,7 +405,7 @@
     "title": "5티어 매물들 봤는데 유미가 기세등등할만하노ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13888929",
     "listing_date": "25.03.31",
-    "views": 197,
+    "views": 198,
     "recommend": 0,
     "comment_count": 2,
     "is_blinded": false,
@@ -369,11 +413,14 @@
     "listing_datetime": "2025-03-31 04:05:03",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "",
         "nickname": "",
         "reply_nick": null,
+        "comment_id": "",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -382,6 +429,7 @@
         "user_id": "684134",
         "nickname": "김가리가리",
         "reply_nick": "@mvp머신",
+        "comment_id": "23613427",
         "comment_body": "@mvp머신ㄹㅇ ㅇㅇ!ㅋㅋ 유미 기세등등할만함 ㅇㅇ!\n\n용변이 티어하나 비워도될정도의 인원이면 모르는데\n\n어깨올라있을만함 ㅇㅇ!",
         "vote_good": 0,
         "vote_bad": 0
@@ -390,6 +438,7 @@
         "user_id": "658286",
         "nickname": "강윤숙",
         "reply_nick": null,
+        "comment_id": "23613426",
         "comment_body": "유미야ㅕ 미안해",
         "vote_good": 0,
         "vote_bad": 0
@@ -402,7 +451,7 @@
     "title": "유미 <<< 내가볼때 문제는 딱하나임 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13888816",
     "listing_date": "25.03.31",
-    "views": 110,
+    "views": 111,
     "recommend": 1,
     "comment_count": 0,
     "is_blinded": false,
@@ -410,6 +459,8 @@
     "listing_datetime": "2025-03-31 03:41:07",
     "good_vote": 1,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -418,7 +469,7 @@
     "title": "진짜 염보성만큼 볶아먹기 쉬운사람없는데 ㅇㅇ!",
     "url": "https://ygosu.com/board/starbbs/13884098",
     "listing_date": "25.03.30",
-    "views": 43,
+    "views": 44,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -426,6 +477,8 @@
     "listing_datetime": "2025-03-30 21:56:09",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -434,7 +487,7 @@
     "title": "통키 시발년들 늑아가방에서 똥 보고있네 ㅇㅇ!ㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13883669",
     "listing_date": "25.03.30",
-    "views": 58,
+    "views": 59,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -442,6 +495,8 @@
     "listing_datetime": "2025-03-30 21:40:38",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -450,7 +505,7 @@
     "title": "유미견 댕이견들 근데 잉이 견제하는건 진짜임 ㅇㅇ!ㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13878655",
     "listing_date": "25.03.30",
-    "views": 44,
+    "views": 45,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -458,6 +513,8 @@
     "listing_datetime": "2025-03-30 18:20:09",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -466,7 +523,7 @@
     "title": "펨베 포텐에 국민연금 ㄹㅇ개쩌농ㄷㄷㄷㄷㄷㄷㄷ",
     "url": "https://ygosu.com/board/starbbs/13874976",
     "listing_date": "25.03.30",
-    "views": 174,
+    "views": 175,
     "recommend": 0,
     "comment_count": 1,
     "is_blinded": false,
@@ -474,11 +531,14 @@
     "listing_datetime": "2025-03-30 00:21:26",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "653603",
         "nickname": "코좆의무사시",
         "reply_nick": null,
+        "comment_id": "23598402",
         "comment_body": "월 30얼마네",
         "vote_good": 0,
         "vote_bad": 0
@@ -491,7 +551,7 @@
     "title": "통키들 KBS 제대로 혼내고있노 ㅇㅇ!ㅋㅋㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13874906",
     "listing_date": "25.03.30",
-    "views": 2457,
+    "views": 2458,
     "recommend": 16,
     "comment_count": 15,
     "is_blinded": false,
@@ -499,11 +559,14 @@
     "listing_datetime": "2025-03-30 00:02:29",
     "good_vote": 16,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "678800",
         "nickname": "와고대장코비",
         "reply_nick": null,
+        "comment_id": "23598118",
         "comment_body": "용변은 추는무덤이야 베스트 댓글",
         "vote_good": 35,
         "vote_bad": 2
@@ -512,6 +575,7 @@
         "user_id": "233228",
         "nickname": "꾸꿍",
         "reply_nick": "@와고대장코비",
+        "comment_id": "23602544",
         "comment_body": "@와고대장코비물성이팬 낙수가 아니라는 증거임",
         "vote_good": 0,
         "vote_bad": 0
@@ -520,6 +584,7 @@
         "user_id": "648174",
         "nickname": "Sloger",
         "reply_nick": null,
+        "comment_id": "23598123",
         "comment_body": "",
         "vote_good": 1,
         "vote_bad": 0
@@ -528,6 +593,7 @@
         "user_id": "694712",
         "nickname": "리 아",
         "reply_nick": null,
+        "comment_id": "23598125",
         "comment_body": "잘하고있자나ㅋㅋ",
         "vote_good": 2,
         "vote_bad": 0
@@ -536,6 +602,7 @@
         "user_id": "655083",
         "nickname": "물소팬들아닥",
         "reply_nick": "@리 아",
+        "comment_id": "23599063",
         "comment_body": "@리 아근데 글쓴새끼 은근슬쩍 이번 2부 콩 반으로 날조하는거 머냐 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ\n8만개 반으로 나누면 콩이 400인데 그걸 어떻게 반이나 후려쳐서 200이라고 하는거냐 ? ㅋㅋㅋㅋㅋㅋ\n하여간 날조아니면 깔수가없노 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 2,
         "vote_bad": 0
@@ -544,6 +611,7 @@
         "user_id": "695801",
         "nickname": "러프러프",
         "reply_nick": null,
+        "comment_id": "23598132",
         "comment_body": "똥퀴들 잘하고있누 ㅇㅇ! 본인들 말대로 추들 낙수는 필요없다는걸 실천중이누 ㅇㅇ!",
         "vote_good": 2,
         "vote_bad": 0
@@ -552,6 +620,7 @@
         "user_id": "692143",
         "nickname": "Heyler",
         "reply_nick": null,
+        "comment_id": "23598242",
         "comment_body": "하꼬추 낙수표도 봣어야지... 썩대는 하꼬추도 잘 챙겨주는편이드만",
         "vote_good": 0,
         "vote_bad": 0
@@ -560,6 +629,7 @@
         "user_id": "557511",
         "nickname": "관상학자",
         "reply_nick": null,
+        "comment_id": "23598245",
         "comment_body": "스타팬덤중 제일 물소팬덤이잖아",
         "vote_good": 0,
         "vote_bad": 0
@@ -568,6 +638,7 @@
         "user_id": "",
         "nickname": "",
         "reply_nick": null,
+        "comment_id": "",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -576,6 +647,7 @@
         "user_id": "673126",
         "nickname": "명바이병장",
         "reply_nick": "@해린",
+        "comment_id": "23600628",
         "comment_body": "@해린니가 만들라니깐 병시나",
         "vote_good": 0,
         "vote_bad": 0
@@ -584,6 +656,7 @@
         "user_id": "454093",
         "nickname": "아무것도아니구나",
         "reply_nick": null,
+        "comment_id": "23598265",
         "comment_body": "빌드 개병신같은데 억빠하는게 어이가 없더라. 뭐 대충 풍으로 혼내주고 있으니 알아서 나가겠지 얘도 JSA 케이대 2통수 때리고 나왔잖아 통수대 그 자체노",
         "vote_good": 1,
         "vote_bad": 0
@@ -592,6 +665,7 @@
         "user_id": "",
         "nickname": "",
         "reply_nick": null,
+        "comment_id": "",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -600,6 +674,7 @@
         "user_id": "691640",
         "nickname": "카디날씬",
         "reply_nick": null,
+        "comment_id": "23598286",
         "comment_body": "야 ㅋㅋㅋㅋㅋㅋㅋㅋ억까하지마라 씨발련아\n대 와이비는 콩 챙겨준다고!!!!!!!!ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 1,
         "vote_bad": 0
@@ -608,6 +683,7 @@
         "user_id": "",
         "nickname": "",
         "reply_nick": null,
+        "comment_id": "",
         "comment_body": "",
         "vote_good": 0,
         "vote_bad": 0
@@ -616,6 +692,7 @@
         "user_id": "692161",
         "nickname": "부탁드립니데이",
         "reply_nick": "@킥킥이",
+        "comment_id": "23600953",
         "comment_body": "@킥킥이ㅋㅋㅋ찐젖퀴",
         "vote_good": 0,
         "vote_bad": 0
@@ -624,6 +701,7 @@
         "user_id": "655083",
         "nickname": "물소팬들아닥",
         "reply_nick": null,
+        "comment_id": "23599074",
         "comment_body": "이번 120만개에서 개인당 8만개 반으로 나누면 콩이 400인데 그걸 어떻게 반이나 후려쳐서 200이라고 하는거냐 ? ㅋㅋㅋㅋㅋㅋ 글쓴새끼 정신병자임 아니면 그냥 YB 까고 싶은거임 ?? ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ",
         "vote_good": 3,
         "vote_bad": 0
@@ -632,6 +710,7 @@
         "user_id": "639590",
         "nickname": "똥카스",
         "reply_nick": null,
+        "comment_id": "23600617",
         "comment_body": "얘는 케이대 jsa 전부 잘받지않았나ㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -640,6 +719,7 @@
         "user_id": "676909",
         "nickname": "qwer1342",
         "reply_nick": null,
+        "comment_id": "23600729",
         "comment_body": "이새기 jsa 거지라서 런한거 아니었노? ㅋㅋㅋㅋ",
         "vote_good": 0,
         "vote_bad": 0
@@ -652,7 +732,7 @@
     "title": "잉이 떠날때만해도 YB 복귀가 말안되는상황이였는데",
     "url": "https://ygosu.com/board/starbbs/13867996",
     "listing_date": "25.03.29",
-    "views": 100,
+    "views": 101,
     "recommend": 0,
     "comment_count": 1,
     "is_blinded": false,
@@ -660,11 +740,14 @@
     "listing_datetime": "2025-03-29 11:18:01",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": [
       {
         "user_id": "423081",
         "nickname": "황..........제",
         "reply_nick": null,
+        "comment_id": "23587524",
         "comment_body": "ㄹㅇㄹㅇ",
         "vote_good": 0,
         "vote_bad": 0
@@ -677,7 +760,7 @@
     "title": "근데 잉이가 히된 기강잡을 수 있겠노ㅇㅇ?!",
     "url": "https://ygosu.com/board/starbbs/13867872",
     "listing_date": "25.03.29",
-    "views": 57,
+    "views": 58,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -685,6 +768,8 @@
     "listing_datetime": "2025-03-29 11:08:06",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -693,7 +778,7 @@
     "title": "근데 유미가 히된넘길거라고 예상했던애들 있노ㅇㅇ?!",
     "url": "https://ygosu.com/board/starbbs/13865024",
     "listing_date": "25.03.29",
-    "views": 59,
+    "views": 60,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -701,6 +786,8 @@
     "listing_datetime": "2025-03-29 02:53:22",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   },
   {
@@ -709,7 +796,7 @@
     "title": "썩햄 추후 일정들 공유해줄게 ㅇㅇ!ㅋㅋ",
     "url": "https://ygosu.com/board/starbbs/13863378",
     "listing_date": "25.03.28",
-    "views": 95,
+    "views": 96,
     "recommend": 0,
     "comment_count": 0,
     "is_blinded": false,
@@ -717,6 +804,8 @@
     "listing_datetime": "2025-03-28 22:58:55",
     "good_vote": 0,
     "bad_vote": 0,
+    "nickname": "김가리가리",
+    "user_id": "684134",
     "comments": []
   }
 ]
