@@ -20,9 +20,9 @@ const EXPAND_PADDING = 60;
 const col = createColumnHelper<Comment>();
 
 function postLink(c: Comment): string {
-  return `https://ygosu.com/board/${c.post_id ? `_/${c.post_id}` : ""}${
-    c.comment_id ? `/?comment_idx=${c.comment_id}` : ""
-  }`;
+  if (!c.board_id || !c.post_id) return "";
+  const base = `https://ygosu.com/board/${c.board_id}/${c.post_id}`;
+  return c.comment_id ? `${base}/?comment_idx=${c.comment_id}` : base;
 }
 
 const columns = [
