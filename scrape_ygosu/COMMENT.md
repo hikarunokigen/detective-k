@@ -43,6 +43,10 @@ For example, in the page "https://ygosu.com/minilog/?m2=article&m3=comment&membe
 "[스타대학]" is the board name.
 "pan_monstarz" is the board id.
 
+In the case of "nickname", it is extractable after visiting the post page. So navigate to the post page extracted above. In that post page, a div with id "reply_write_2758984" has that particular comment. li.inner_reply:nth-child(9) > div:nth-child(1) > div:nth-child(1) exists inside that div. And the anchor tag (li.inner_reply:nth-child(9) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)) has the nickname value we need.
+
+In the case of https://ygosu.com/board/pan_monstarz/1291823/?comment_idx=2758996, the nickname is "늑애".
+
 ## Result format
 
 ```typescript
@@ -52,6 +56,7 @@ interface Comment {
   comment_id: string;
   comment_body: string;
   comment_datetime: string;
+  nickname: string;
   board_id: string;
   board_name: string;
   vote_good: number;

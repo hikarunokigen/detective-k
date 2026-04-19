@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { chromium, type Page } from "playwright";
+import { chromium, type BrowserContext, type Page } from "playwright";
 import type { Comment } from "ygosu_types";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
@@ -11,6 +11,15 @@ const MEMBER_ID = "684134";
 
 const PAGE_COOLDOWN_MIN_MS = 2000;
 const PAGE_COOLDOWN_MAX_MS = 4000;
+
+// For per-post nickname fetches.
+const NICK_CONCURRENCY = 3;
+const NICK_JITTER_MIN_MS = 600;
+const NICK_JITTER_MAX_MS = 1800;
+
+// Cache of nicknames per post so we don't re-fetch a post once we've seen it.
+// Key: `<board_id>/<post_id>` → map of comment_id → nickname.
+const nicknameCache = new Map<string, Map<string, string>>();
 
 const LISTING_URL = (page: number) =>
   `https://ygosu.com/minilog/?m2=article&m3=comment&member=${MEMBER_ID}&search=&page=${page}`;
@@ -37,6 +46,8 @@ function extractBoardId(url: string): string {
 }
 
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
+const nickJitterMs = () =>
+  NICK_JITTER_MIN_MS + Math.random() * (NICK_JITTER_MAX_MS - NICK_JITTER_MIN_MS);
 
 async function readTotalCount(page: Page): Promise<number | null> {
   // The pagination strip's `b.last` only advances one window at a time
@@ -130,6 +141,7 @@ async function scrapeCommentListing(
       comment_id: commentId,
       comment_body: commentBody,
       comment_datetime: commentDatetime,
+      nickname: "", // filled in by enrichWithNicknames after all listing rows are collected
       board_id: boardId,
       board_name: boardName,
       vote_good: voteGood,
@@ -138,6 +150,99 @@ async function scrapeCommentListing(
   }
 
   return { comments, lastPage };
+}
+
+/**
+ * Visit a post page once and extract every comment's nickname, keyed by
+ * comment id. Result is cached so repeat comments on the same post are free.
+ *
+ * Comment items carry `div.body_wrap > div[id^="reply_body_"]` with an id
+ * shaped like `reply_body_<board>_<commentId>`. Walking from that id up to
+ * the enclosing `li.normal_reply` / `li.inner_reply` gives us the comment
+ * row, and `div.nick` within it holds the nickname anchor.
+ */
+async function fetchNicknamesForPost(
+  page: Page,
+  boardId: string,
+  postId: string,
+): Promise<Map<string, string>> {
+  const postKey = `${boardId}/${postId}`;
+  const cached = nicknameCache.get(postKey);
+  if (cached) return cached;
+
+  const url = `https://ygosu.com/board/${boardId}/${postId}`;
+  console.log(`[nick] ${url}`);
+  await page.goto(url, { waitUntil: "domcontentloaded" });
+
+  const items = page.locator(
+    "ul#reply_list_layer li.normal_reply, ul#reply_list_layer li.inner_reply",
+  );
+  const n = await items.count();
+  const result = new Map<string, string>();
+  for (let i = 0; i < n; i++) {
+    const item = items.nth(i);
+    const bodyLoc = item.locator("div[id^='reply_body_']").first();
+    if ((await bodyLoc.count()) === 0) continue;
+    const id = (await bodyLoc.getAttribute("id")) ?? "";
+    const commentId = id.match(/_(\d+)$/)?.[1];
+    if (!commentId) continue;
+    const nickLoc = item.locator("div.nick").first();
+    const nickname =
+      (await nickLoc.count()) > 0 ? ((await nickLoc.textContent()) ?? "").trim() : "";
+    result.set(commentId, nickname);
+  }
+
+  nicknameCache.set(postKey, result);
+  return result;
+}
+
+async function enrichWithNicknames(
+  context: BrowserContext,
+  comments: Comment[],
+): Promise<void> {
+  // Deduplicate target posts; respect the module cache so pages already
+  // visited in earlier iterations (different listing page, same post) are
+  // free.
+  const targets: Array<{ boardId: string; postId: string }> = [];
+  const seen = new Set<string>();
+  for (const c of comments) {
+    if (!c.board_id || !c.post_id) continue;
+    const key = `${c.board_id}/${c.post_id}`;
+    if (seen.has(key) || nicknameCache.has(key)) continue;
+    seen.add(key);
+    targets.push({ boardId: c.board_id, postId: c.post_id });
+  }
+
+  if (targets.length > 0) {
+    const poolSize = Math.min(NICK_CONCURRENCY, targets.length);
+    const pool = await Promise.all(
+      Array.from({ length: poolSize }, () => context.newPage()),
+    );
+    try {
+      let cursor = 0;
+      await Promise.all(
+        pool.map(async (page) => {
+          while (true) {
+            const i = cursor++;
+            if (i >= targets.length) return;
+            const { boardId, postId } = targets[i]!;
+            await sleep(nickJitterMs());
+            await fetchNicknamesForPost(page, boardId, postId);
+          }
+        }),
+      );
+    } finally {
+      await Promise.all(pool.map((p) => p.close()));
+    }
+  }
+
+  // Backfill nicknames onto the comments.
+  for (const c of comments) {
+    if (!c.board_id || !c.post_id) continue;
+    const postKey = `${c.board_id}/${c.post_id}`;
+    const nickMap = nicknameCache.get(postKey);
+    c.nickname = nickMap?.get(c.comment_id) ?? "";
+  }
 }
 
 async function main() {
@@ -167,6 +272,9 @@ async function main() {
         console.log(`[done] page ${pageNum} returned 0 comments — stopping`);
         break;
       }
+
+      await enrichWithNicknames(context, comments);
+
       const filename = `ygosu__cmt__user_${MEMBER_ID}__${pageNum}__${dateStr}.json`;
       const outPath = join(DATA_DIR, filename);
       await writeFile(outPath, JSON.stringify(comments, null, 2), "utf8");

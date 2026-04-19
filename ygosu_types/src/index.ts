@@ -39,6 +39,7 @@ export interface Comment {
   comment_id: string;
   comment_body: string;
   comment_datetime: string;
+  nickname: string;
   board_id: string;
   board_name: string;
   vote_good: number;
