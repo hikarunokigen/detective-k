@@ -31,6 +31,11 @@ function extractCommentId(url: string): string {
   return url.match(/[?&]comment_idx=(\d+)/)?.[1] ?? "";
 }
 
+function extractBoardId(url: string): string {
+  // /board/pan_monstarz/1290400/?comment_idx=2755303  →  "pan_monstarz"
+  return url.match(/\/board\/([^/?#]+)/)?.[1] ?? "";
+}
+
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
 async function readTotalCount(page: Page): Promise<number | null> {
@@ -87,9 +92,12 @@ async function scrapeCommentListing(
     const header = box.locator(":scope > div").nth(0);
     const desc = box.locator("div.desc").first();
 
+    const boardAnchor = header.locator("h5 a").nth(0);
     const postAnchor = header.locator("h5 a").nth(1);
     const dateP = header.locator("p").nth(0);
 
+    const boardName =
+      (await boardAnchor.count()) > 0 ? ((await boardAnchor.textContent()) ?? "").trim() : "";
     const postTitle =
       (await postAnchor.count()) > 0 ? ((await postAnchor.textContent()) ?? "").trim() : "";
     const postHref =
@@ -97,6 +105,7 @@ async function scrapeCommentListing(
     const postUrl = absolutize(postHref);
     const postId = extractPostId(postUrl);
     const commentId = extractCommentId(postUrl);
+    const boardId = extractBoardId(postUrl);
 
     const rawDate = (await dateP.count()) > 0 ? ((await dateP.textContent()) ?? "").trim() : "";
     const commentDatetime = rawDate.match(/\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}/)?.[0] ?? "";
@@ -121,6 +130,8 @@ async function scrapeCommentListing(
       comment_id: commentId,
       comment_body: commentBody,
       comment_datetime: commentDatetime,
+      board_id: boardId,
+      board_name: boardName,
       vote_good: voteGood,
       vote_bad: voteBad,
     });

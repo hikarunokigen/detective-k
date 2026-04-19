@@ -28,6 +28,8 @@ div.title has the title of the post his comments were written.
 
 - div.mrbox:nth-child(1) > div:nth-child(2) > span:nth-child(3) here also has the good/bad votes this comment got.
 
+- "div.mrbox:nth-child(1) > div:nth-child(1) > h5:nth-child(1) > a:nth-child(1)div.mrbox:nth-child(1) > div:nth-child(1) > h5:nth-child(1) > a:nth-child(1)" has board information.
+
 For example, in the page "https://ygosu.com/minilog/?m2=article&m3=comment&member=684134&search=&page=1", the first comment has the following information.
 
 "[스타대학]" is the name of the board.
@@ -38,6 +40,8 @@ For example, in the page "https://ygosu.com/minilog/?m2=article&m3=comment&membe
 "2026-04-19 00:34:58" is the datetime of this comment.
 "애들방 구걸이라도하면 선녀지 시발 개소리노\n\n 앉아서 담배피다가 시간되면 다시 노력하는척함" is the body of comment.
 "1" (number) is the good vote, "0" (number) is the down vote.
+"[스타대학]" is the board name.
+"pan_monstarz" is the board id.
 
 ## Result format
 
@@ -48,6 +52,8 @@ interface Comment {
   comment_id: string;
   comment_body: string;
   comment_datetime: string;
+  board_id: string;
+  board_name: string;
   vote_good: number;
   vote_bad: number;
 }
