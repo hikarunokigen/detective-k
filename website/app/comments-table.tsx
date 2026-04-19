@@ -116,27 +116,34 @@ export default function CommentsTable({ data }: { data: Comment[] }) {
     <>
       <div className={styles.summary}>comments · {data.length} rows</div>
       <div className={styles.wrap} ref={parentRef}>
-        <div className={styles.header} style={{ width: totalWidth }}>
+        <div className={styles.header} style={{ minWidth: totalWidth }}>
           {table.getHeaderGroups().map((hg) =>
-            hg.headers.map((h) => (
-              <div
-                key={h.id}
-                className={styles.headerCell}
-                style={{ width: h.getSize() }}
-                onClick={h.column.getToggleSortingHandler()}
-              >
-                {flexRender(h.column.columnDef.header, h.getContext())}
-                <span className={styles.sortIndicator}>
-                  {{ asc: " ↑", desc: " ↓" }[h.column.getIsSorted() as string] ?? ""}
-                </span>
-              </div>
-            )),
+            hg.headers.map((h) => {
+              const elastic = h.column.id === "comment_body";
+              return (
+                <div
+                  key={h.id}
+                  className={styles.headerCell}
+                  style={
+                    elastic
+                      ? { flex: 1, minWidth: h.getSize() }
+                      : { width: h.getSize() }
+                  }
+                  onClick={h.column.getToggleSortingHandler()}
+                >
+                  {flexRender(h.column.columnDef.header, h.getContext())}
+                  <span className={styles.sortIndicator}>
+                    {{ asc: " ↑", desc: " ↓" }[h.column.getIsSorted() as string] ?? ""}
+                  </span>
+                </div>
+              );
+            }),
           )}
         </div>
 
         <div
           className={styles.rowsLayer}
-          style={{ height: virtualizer.getTotalSize(), width: totalWidth }}
+          style={{ height: virtualizer.getTotalSize(), minWidth: totalWidth }}
         >
           {virtualizer.getVirtualItems().map((vr) => {
             const row = rows[vr.index]!;
@@ -167,11 +174,16 @@ export default function CommentsTable({ data }: { data: Comment[] }) {
                   {row.getVisibleCells().map((cell) => {
                     const numeric = (cell.column.columnDef.meta as { numeric?: boolean } | undefined)
                       ?.numeric;
+                    const elastic = cell.column.id === "comment_body";
                     return (
                       <div
                         key={cell.id}
                         className={`${styles.cell} ${numeric ? styles.cellNum : ""}`}
-                        style={{ width: cell.column.getSize() }}
+                        style={
+                          elastic
+                            ? { flex: 1, minWidth: cell.column.getSize() }
+                            : { width: cell.column.getSize() }
+                        }
                       >
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </div>
