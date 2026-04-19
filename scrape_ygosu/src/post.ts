@@ -46,6 +46,7 @@ interface Post {
   views: number;
   recommend: number;
   comment_count: number;
+  is_blinded: boolean;
   post_body: string;
   good_vote: number;
   bad_vote: number;
@@ -153,6 +154,7 @@ async function scrapePostDetail(
   page: Page,
   url: string,
 ): Promise<{
+  is_blinded: boolean;
   post_body: string;
   listing_datetime: string;
   good_vote: number;
@@ -161,6 +163,12 @@ async function scrapePostDetail(
 }> {
   console.log(`[detail] ${url}`);
   await page.goto(url, { waitUntil: "domcontentloaded" });
+
+  // Blinded (admin-flagged) posts render a placeholder headline in
+  // `.board_t h2`: "관리자에 의해서 블라인드된 게시글입니다." — the post body
+  // is replaced, so detect it early and short-circuit the other fields.
+  const blindHeadline = page.locator(".board_t h2", { hasText: "블라인드" }).first();
+  const is_blinded = (await blindHeadline.count()) > 0;
 
   const body = page.locator(".board_body .container").first();
   const postBody = (await body.count()) > 0 ? ((await body.innerText()) ?? "").trim() : "";
@@ -218,7 +226,7 @@ async function scrapePostDetail(
     });
   }
 
-  return { post_body: postBody, listing_datetime, good_vote, bad_vote, comments };
+  return { is_blinded, post_body: postBody, listing_datetime, good_vote, bad_vote, comments };
 }
 
 /**

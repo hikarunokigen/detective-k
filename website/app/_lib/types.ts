@@ -16,6 +16,7 @@ export interface Post {
   views: number;
   recommend: number;
   comment_count: number;
+  is_blinded: boolean;
   post_body: string;
   good_vote: number;
   bad_vote: number;
