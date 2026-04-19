@@ -2,8 +2,8 @@ $mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 
 .main {
   padding: 24px 20px;
-  background: #0a0a0a;
-  color: #ddd;
+  background: #fff;
+  color: #111;
   min-height: 100vh;
 }
 
@@ -15,10 +15,11 @@ $mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   margin: 0;
   font-family: $mono;
   font-size: 20px;
+  color: #111;
 }
 
 .subtitle {
-  color: #888;
+  color: #555;
   font-size: 13px;
   margin-top: 4px;
 }
@@ -34,5 +35,5 @@ $mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 .sectionHeading {
   font-family: $mono;
   font-size: 14px;
-  color: #aaa;
+  color: #333;
 }
