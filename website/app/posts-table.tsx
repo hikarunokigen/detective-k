@@ -17,6 +17,12 @@ import type { Post, PostComment } from "ygosu_types";
 const ROW_HEIGHT = 30;
 const EXPAND_PADDING = 80;
 
+// "2026-04-14 21:49:21" → "26-04-14 21:49"
+function formatWhen(v: string): string {
+  const m = v.match(/^\d{2}(\d{2}-\d{2}-\d{2}) (\d{2}:\d{2})/);
+  return m ? `${m[1]} ${m[2]}` : v;
+}
+
 const col = createColumnHelper<Post>();
 
 const columns = [
@@ -38,7 +44,11 @@ const columns = [
     ),
   }),
   col.accessor("nickname", { header: "nickname", size: 120 }),
-  col.accessor("listing_datetime", { header: "when", size: 160 }),
+  col.accessor("listing_datetime", {
+    header: "when",
+    size: 130,
+    cell: (c) => formatWhen((c.getValue() as string) ?? ""),
+  }),
   col.accessor("category", { header: "board", size: 120 }),
   col.accessor("views", { header: "views", size: 70, meta: { numeric: true } }),
   col.accessor("good_vote", { header: "+", size: 50, meta: { numeric: true } }),

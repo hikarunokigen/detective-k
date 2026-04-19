@@ -17,6 +17,12 @@ import type { Comment } from "ygosu_types";
 const ROW_HEIGHT = 30;
 const EXPAND_PADDING = 60;
 
+// "2026-04-19 00:34:58" → "26-04-19 00:34"
+function formatWhen(v: string): string {
+  const m = v.match(/^\d{2}(\d{2}-\d{2}-\d{2}) (\d{2}:\d{2})/);
+  return m ? `${m[1]} ${m[2]}` : v;
+}
+
 const col = createColumnHelper<Comment>();
 
 function postLink(c: Comment): string {
@@ -26,10 +32,10 @@ function postLink(c: Comment): string {
 }
 
 const columns = [
-  col.accessor("comment_datetime", { header: "when", size: 160 }),
+  col.accessor("comment_id", { header: "id", size: 90, meta: { numeric: true } }),
   col.accessor("post_title", {
     header: "post",
-    size: 380,
+    size: 300,
     cell: (c) => (
       <span className={styles.titleCell}>
         <a
@@ -51,6 +57,11 @@ const columns = [
       const oneLine = v.replace(/\s+/g, " ").trim();
       return oneLine.length > 140 ? oneLine.slice(0, 140) + "…" : oneLine;
     },
+  }),
+  col.accessor("comment_datetime", {
+    header: "when",
+    size: 130,
+    cell: (c) => formatWhen((c.getValue() as string) ?? ""),
   }),
   col.accessor("vote_good", { header: "+", size: 50, meta: { numeric: true } }),
   col.accessor("vote_bad", { header: "−", size: 50, meta: { numeric: true } }),
