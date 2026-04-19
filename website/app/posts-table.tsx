@@ -20,8 +20,7 @@ const EXPAND_PADDING = 80;
 const col = createColumnHelper<Post>();
 
 const columns = [
-  col.accessor("listing_datetime", { header: "when", size: 160 }),
-  col.accessor("category", { header: "board", size: 120 }),
+  col.accessor("post_id", { header: "id", size: 90, meta: { numeric: true } }),
   col.accessor("title", {
     header: "title",
     size: 480,
@@ -38,6 +37,9 @@ const columns = [
       </span>
     ),
   }),
+  col.accessor("nickname", { header: "nickname", size: 120 }),
+  col.accessor("listing_datetime", { header: "when", size: 160 }),
+  col.accessor("category", { header: "board", size: 120 }),
   col.accessor("views", { header: "views", size: 70, meta: { numeric: true } }),
   col.accessor("good_vote", { header: "+", size: 50, meta: { numeric: true } }),
   col.accessor("bad_vote", { header: "−", size: 50, meta: { numeric: true } }),
@@ -89,27 +91,34 @@ export default function PostsTable({ data }: { data: Post[] }) {
     <>
       <div className={styles.summary}>posts · {data.length} rows</div>
       <div className={styles.wrap} ref={parentRef}>
-        <div className={styles.header} style={{ width: totalWidth }}>
+        <div className={styles.header} style={{ minWidth: totalWidth }}>
           {table.getHeaderGroups().map((hg) =>
-            hg.headers.map((h) => (
-              <div
-                key={h.id}
-                className={styles.headerCell}
-                style={{ width: h.getSize() }}
-                onClick={h.column.getToggleSortingHandler()}
-              >
-                {flexRender(h.column.columnDef.header, h.getContext())}
-                <span className={styles.sortIndicator}>
-                  {{ asc: " ↑", desc: " ↓" }[h.column.getIsSorted() as string] ?? ""}
-                </span>
-              </div>
-            )),
+            hg.headers.map((h) => {
+              const elastic = h.column.id === "title";
+              return (
+                <div
+                  key={h.id}
+                  className={styles.headerCell}
+                  style={
+                    elastic
+                      ? { flex: 1, minWidth: h.getSize() }
+                      : { width: h.getSize() }
+                  }
+                  onClick={h.column.getToggleSortingHandler()}
+                >
+                  {flexRender(h.column.columnDef.header, h.getContext())}
+                  <span className={styles.sortIndicator}>
+                    {{ asc: " ↑", desc: " ↓" }[h.column.getIsSorted() as string] ?? ""}
+                  </span>
+                </div>
+              );
+            }),
           )}
         </div>
 
         <div
           className={styles.rowsLayer}
-          style={{ height: virtualizer.getTotalSize(), width: totalWidth }}
+          style={{ height: virtualizer.getTotalSize(), minWidth: totalWidth }}
         >
           {virtualizer.getVirtualItems().map((vr) => {
             const row = rows[vr.index]!;
@@ -140,11 +149,16 @@ export default function PostsTable({ data }: { data: Post[] }) {
                   {row.getVisibleCells().map((cell) => {
                     const numeric = (cell.column.columnDef.meta as { numeric?: boolean } | undefined)
                       ?.numeric;
+                    const elastic = cell.column.id === "title";
                     return (
                       <div
                         key={cell.id}
                         className={`${styles.cell} ${numeric ? styles.cellNum : ""}`}
-                        style={{ width: cell.column.getSize() }}
+                        style={
+                          elastic
+                            ? { flex: 1, minWidth: cell.column.getSize() }
+                            : { width: cell.column.getSize() }
+                        }
                       >
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </div>
