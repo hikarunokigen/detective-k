@@ -2,6 +2,8 @@ $mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 $link: #1a4b8c;
 
 .main {
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 24px 20px;
   background: #fff;
   color: #111;
