@@ -27,7 +27,12 @@ const columns = [
     size: 480,
     cell: (c) => (
       <span className={styles.titleCell}>
-        <a href={c.row.original.url} target="_blank" rel="noreferrer">
+        <a
+          href={c.row.original.url}
+          target="_blank"
+          rel="noreferrer"
+          onClick={(e) => e.stopPropagation()}
+        >
           {c.getValue()}
         </a>
       </span>
@@ -78,14 +83,13 @@ export default function PostsTable({ data }: { data: Post[] }) {
     overscan: 6,
   });
 
-  const totalWidth = table.getTotalSize() + 24; // + expand column
+  const totalWidth = table.getTotalSize();
 
   return (
     <>
       <div className={styles.summary}>posts · {data.length} rows</div>
       <div className={styles.wrap} ref={parentRef}>
         <div className={styles.header} style={{ width: totalWidth }}>
-          <div className={styles.expandBtn} aria-hidden />
           {table.getHeaderGroups().map((hg) =>
             hg.headers.map((h) => (
               <div
@@ -118,16 +122,21 @@ export default function PostsTable({ data }: { data: Post[] }) {
                 ref={virtualizer.measureElement}
                 data-index={vr.index}
               >
-                <div className={styles.rowInner}>
-                  <button
-                    className={styles.expandBtn}
-                    onClick={() =>
-                      setExpanded((p) => ({ ...p, [row.id]: !p[row.id] }))
+                <div
+                  className={styles.rowInner}
+                  role="button"
+                  tabIndex={0}
+                  aria-expanded={isOpen}
+                  onClick={() =>
+                    setExpanded((p) => ({ ...p, [row.id]: !p[row.id] }))
+                  }
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setExpanded((p) => ({ ...p, [row.id]: !p[row.id] }));
                     }
-                    aria-label={isOpen ? "collapse" : "expand"}
-                  >
-                    {isOpen ? "▾" : "▸"}
-                  </button>
+                  }}
+                >
                   {row.getVisibleCells().map((cell) => {
                     const numeric = (cell.column.columnDef.meta as { numeric?: boolean } | undefined)
                       ?.numeric;

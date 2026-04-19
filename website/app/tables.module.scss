@@ -75,6 +75,16 @@ $link: #1a4b8c;
 .rowInner {
   display: flex;
   width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background: #f2f6fb;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $link;
+    outline-offset: -2px;
+  }
 }
 
 .cell {
@@ -88,21 +98,6 @@ $link: #1a4b8c;
 .cellNum {
   text-align: right;
   font-variant-numeric: tabular-nums;
-}
-
-.expandBtn {
-  width: 24px;
-  padding: 6px 4px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: $muted;
-  font: inherit;
-  flex-shrink: 0;
-
-  &:hover {
-    color: #000;
-  }
 }
 
 .titleCell {
