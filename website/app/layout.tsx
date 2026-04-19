@@ -1,3 +1,4 @@
+import type { Viewport } from "next";
 import type { ReactNode } from "react";
 
 import "./globals.scss";
@@ -5,6 +6,11 @@ import "./globals.scss";
 export const metadata = {
   title: "detective_k",
   description: "ygosu sleuthing",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

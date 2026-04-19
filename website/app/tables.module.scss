@@ -26,6 +26,27 @@ $link: #1a4b8c;
   height: 70vh;
   overflow: auto;
   position: relative;
+  // iOS: give the touch scroll proper momentum inside the fixed-height box.
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    font-size: 14px;
+  }
+
+  .headerCell {
+    padding: 10px 12px;
+  }
+
+  .cell {
+    padding: 10px 12px;
+  }
+
+  .summary {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
 }
 
 .header {

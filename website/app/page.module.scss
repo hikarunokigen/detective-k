@@ -7,6 +7,24 @@ $mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   min-height: 100vh;
 }
 
+@media (max-width: 640px) {
+  .main {
+    padding: 16px 12px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .sectionHeading {
+    font-size: 13px;
+  }
+}
+
 .header {
   margin-bottom: 24px;
 }
