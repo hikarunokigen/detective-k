@@ -78,44 +78,46 @@ function parseInt10(s: string | null | undefined): number {
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 const jitterMs = () => MIN_JITTER_MS + Math.random() * (MAX_JITTER_MS - MIN_JITTER_MS);
 
-async function readLastPage(page: Page): Promise<number | null> {
-  // ygosu serves the actual last page's content if you request a page beyond
-  // it (no URL change, no redirect). `b.last` in the pagination strip tells
-  // us the real upper bound so we can stop instead of looping on duplicates.
-  const lastEl = page.locator("b.last").first();
-  if ((await lastEl.count()) === 0) return null;
-
-  const text = ((await lastEl.textContent()) ?? "").trim();
-  const textNum = text.match(/\d+/)?.[0];
-  if (textNum) return Number(textNum);
-
-  const anchor = page.locator("a:has(b.last)").first();
-  if ((await anchor.count()) === 0) return null;
-  const href = (await anchor.getAttribute("href")) ?? "";
-  const onclick = (await anchor.getAttribute("onclick")) ?? "";
-  const fromHref = href.match(/[?&]page=(\d+)/)?.[1];
-  if (fromHref) return Number(fromHref);
-  const fromOnclick = onclick.match(/(\d+)/)?.[1];
-  return fromOnclick ? Number(fromOnclick) : null;
+async function readTotalCount(page: Page): Promise<number | null> {
+  // `b.last` only advances one window at a time (stops at 10 even when
+  // 60+ pages exist), so we derive the real last page from the total
+  // record count advertised on the profile header.
+  const loc = page
+    .locator(".det_myboard > h3:nth-child(1) > i:nth-child(3) > strong:nth-child(1)")
+    .first();
+  if ((await loc.count()) === 0) return null;
+  const text = ((await loc.textContent()) ?? "").replace(/,/g, "");
+  const m = text.match(/\d+/);
+  return m ? Number(m[0]) : null;
 }
 
 async function scrapeListing(
   page: Page,
   pageNum: number,
+  knownLastPage: number | null,
 ): Promise<{ summaries: PostSummary[]; lastPage: number | null }> {
   const listingUrl = LISTING_URL(pageNum);
   console.log(`[listing] ${listingUrl}`);
   await page.goto(listingUrl, { waitUntil: "domcontentloaded" });
 
-  const lastPage = await readLastPage(page);
-  if (lastPage !== null && pageNum > lastPage) {
-    console.log(`[listing] page ${pageNum} > last page ${lastPage} — skipping`);
-    return { summaries: [], lastPage };
+  if (knownLastPage !== null && pageNum > knownLastPage) {
+    console.log(`[listing] page ${pageNum} > last page ${knownLastPage} — skipping`);
+    return { summaries: [], lastPage: knownLastPage };
   }
 
   const rows = page.locator("table.tbl_ua tr:has(td.tit)");
   const count = await rows.count();
   console.log(`[listing] ${count} rows matched`);
+
+  // Derive last page from total record count on the first page only; carry forward.
+  let lastPage = knownLastPage;
+  if (lastPage === null && pageNum === 1 && count > 0) {
+    const total = await readTotalCount(page);
+    if (total !== null) {
+      lastPage = Math.ceil(total / count);
+      console.log(`[listing] total=${total}, per_page=${count}, last_page=${lastPage}`);
+    }
+  }
 
   const summaries: PostSummary[] = [];
   for (let i = 0; i < count; i++) {
@@ -269,12 +271,13 @@ async function mapWithWorkers<T, R>(
 async function scrapePage(
   context: BrowserContext,
   pageNum: number,
+  knownLastPage: number | null,
 ): Promise<{ posts: Post[]; lastPage: number | null }> {
   const listPage = await context.newPage();
   let summaries: PostSummary[];
   let lastPage: number | null;
   try {
-    ({ summaries, lastPage } = await scrapeListing(listPage, pageNum));
+    ({ summaries, lastPage } = await scrapeListing(listPage, pageNum, knownLastPage));
   } finally {
     await listPage.close();
   }
@@ -317,8 +320,11 @@ async function main() {
     ].join("_");
     await mkdir(DATA_DIR, { recursive: true });
 
+    let lastPage: number | null = null;
     for (let pageNum = 1; ; pageNum++) {
-      const { posts, lastPage } = await scrapePage(context, pageNum);
+      const result = await scrapePage(context, pageNum, lastPage);
+      if (result.lastPage !== null) lastPage = result.lastPage;
+      const { posts } = result;
       if (posts.length === 0) {
         console.log(`[done] page ${pageNum} returned 0 posts — stopping`);
         break;

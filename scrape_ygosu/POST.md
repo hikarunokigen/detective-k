@@ -50,6 +50,10 @@ Under ul#reply_list_layer, there is a list of li#normal_reply (s). Each li has d
 
 For each page in the table, there is a list of posts. In order to retreive the body and comments of each post, we need to visit that web page. Visiting a list of those web pages can be parallelized. However, we should also consider rate limiting as the host website may block us. So we need to pause every once in a while properly.
 
+## Record count and Last page
+
+The table has records of count rendered in ".det_myboard > h3:nth-child(1) > i:nth-child(3) > strong:nth-child(1)". So to fetch all the data, we need to estimate the total number of "pages".
+
 ## Result format
 
 ```typescript
