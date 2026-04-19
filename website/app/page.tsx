@@ -1,7 +1,6 @@
 import { loadComments, loadPosts } from "./_lib/data";
-import CommentsTable from "./comments-table";
 import styles from "./page.module.scss";
-import PostsTable from "./posts-table";
+import TableTabs from "./table-tabs";
 
 export default async function Page() {
   const [posts, comments] = await Promise.all([loadPosts(), loadComments()]);
@@ -16,15 +15,7 @@ export default async function Page() {
         </p>
       </header>
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionHeading}>posts</h2>
-        <PostsTable data={posts} />
-      </section>
-
-      <section className={styles.section}>
-        <h2 className={styles.sectionHeading}>comments</h2>
-        <CommentsTable data={comments} />
-      </section>
+      <TableTabs posts={posts} comments={comments} />
     </main>
   );
 }

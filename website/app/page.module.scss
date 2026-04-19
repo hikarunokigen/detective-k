@@ -1,4 +1,5 @@
 $mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+$link: #1a4b8c;
 
 .main {
   padding: 24px 20px;
@@ -7,26 +8,8 @@ $mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   min-height: 100vh;
 }
 
-@media (max-width: 640px) {
-  .main {
-    padding: 16px 12px;
-  }
-
-  .title {
-    font-size: 18px;
-  }
-
-  .subtitle {
-    font-size: 14px;
-  }
-
-  .sectionHeading {
-    font-size: 13px;
-  }
-}
-
 .header {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .title {
@@ -42,16 +25,73 @@ $mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   margin-top: 4px;
 }
 
-.section {
-  margin-bottom: 32px;
+.tabs {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid #d0d0d0;
+  margin-bottom: 12px;
+}
 
-  &:last-child {
-    margin-bottom: 0;
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: $mono;
+  font-size: 13px;
+  padding: 8px 14px;
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+
+  &:hover {
+    color: #111;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $link;
+    outline-offset: -2px;
   }
 }
 
-.sectionHeading {
-  font-family: $mono;
-  font-size: 14px;
-  color: #333;
+.tabActive {
+  color: #111;
+  font-weight: 600;
+  border-bottom-color: $link;
+}
+
+.tabCount {
+  color: #888;
+  font-size: 11px;
+  font-weight: 400;
+  padding: 1px 6px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabActive .tabCount {
+  color: #444;
+  background: #e4ebf5;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 16px 12px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
 }
