@@ -29,7 +29,7 @@ const columns = [
   col.accessor("post_id", { header: "id", size: 90, meta: { numeric: true } }),
   col.accessor("title", {
     header: "title",
-    size: 480,
+    size: 380,
     cell: (c) => (
       <span className={styles.titleCell}>
         <a
@@ -43,13 +43,13 @@ const columns = [
       </span>
     ),
   }),
-  col.accessor("nickname", { header: "nickname", size: 120 }),
+  col.accessor("nickname", { header: "nickname", size: 100 }),
   col.accessor("listing_datetime", {
     header: "when",
     size: 130,
     cell: (c) => formatWhen((c.getValue() as string) ?? ""),
   }),
-  col.accessor("category", { header: "board", size: 120 }),
+  col.accessor("category", { header: "board", size: 80 }),
   col.accessor("views", { header: "views", size: 70, meta: { numeric: true } }),
   col.accessor("good_vote", { header: "+", size: 50, meta: { numeric: true } }),
   col.accessor("bad_vote", { header: "−", size: 50, meta: { numeric: true } }),
@@ -194,7 +194,8 @@ function ExpandedRow({ post }: { post: Post }) {
           {post.comments.map((c: PostComment, i: number) => (
             <div key={`${post.post_id}-${i}`} className={styles.subRow}>
               <span className={styles.subMeta}>
-                {c.nickname || "(no nick)"} · +{c.vote_good}/−{c.vote_bad}
+                #{c.comment_id || "?"} · {c.nickname || "(no nick)"} · +
+                {c.vote_good}/−{c.vote_bad}
               </span>
               {c.comment_body}
             </div>
