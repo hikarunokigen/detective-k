@@ -32,9 +32,10 @@ function postLink(c: Comment): string {
 }
 
 const columns = [
-  col.accessor("comment_id", { header: "id", size: 90, meta: { numeric: true } }),
+  col.accessor("comment_id", { header: "댓글ID", size: 90 }),
+  col.accessor("post_id", { header: "글ID", size: 90 }),
   col.accessor("post_title", {
-    header: "post",
+    header: "글",
     size: 300,
     cell: (c) => (
       <span className={styles.titleCell}>
@@ -50,7 +51,7 @@ const columns = [
     ),
   }),
   col.accessor("comment_body", {
-    header: "body",
+    header: "댓글",
     size: 480,
     cell: (c) => {
       const v = (c.getValue() as string) ?? "";
@@ -58,15 +59,15 @@ const columns = [
       return oneLine.length > 140 ? oneLine.slice(0, 140) + "…" : oneLine;
     },
   }),
-  col.accessor("nickname", { header: "nickname", size: 100 }),
+  col.accessor("nickname", { header: "닉네임", size: 100 }),
   col.accessor("comment_datetime", {
-    header: "when",
+    header: "시간",
     size: 130,
     cell: (c) => formatWhen((c.getValue() as string) ?? ""),
   }),
   col.accessor((row) => row.vote_good - row.vote_bad, {
     id: "vote",
-    header: "vote",
+    header: "추천",
     size: 90,
     meta: { numeric: true },
     cell: (c) => `+${c.row.original.vote_good}/−${c.row.original.vote_bad}`,
@@ -121,10 +122,12 @@ export default function CommentsTable({ data }: { data: Comment[] }) {
           {table.getHeaderGroups().map((hg) =>
             hg.headers.map((h) => {
               const elastic = h.column.id === "comment_body";
+              const numeric = (h.column.columnDef.meta as { numeric?: boolean } | undefined)
+                ?.numeric;
               return (
                 <div
                   key={h.id}
-                  className={styles.headerCell}
+                  className={`${styles.headerCell} ${numeric ? styles.cellNum : ""}`}
                   style={
                     elastic
                       ? { flex: 1, minWidth: h.getSize() }

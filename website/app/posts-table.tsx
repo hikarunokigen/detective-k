@@ -26,9 +26,9 @@ function formatWhen(v: string): string {
 const col = createColumnHelper<Post>();
 
 const columns = [
-  col.accessor("post_id", { header: "id", size: 90, meta: { numeric: true } }),
+  col.accessor("post_id", { header: "글ID", size: 90 }),
   col.accessor("title", {
-    header: "title",
+    header: "제목",
     size: 380,
     cell: (c) => (
       <span className={styles.titleCell}>
@@ -43,22 +43,22 @@ const columns = [
       </span>
     ),
   }),
-  col.accessor("nickname", { header: "nickname", size: 100 }),
+  col.accessor("nickname", { header: "닉네임", size: 100 }),
   col.accessor("listing_datetime", {
-    header: "when",
+    header: "시간",
     size: 130,
     cell: (c) => formatWhen((c.getValue() as string) ?? ""),
   }),
-  col.accessor("category", { header: "board", size: 80 }),
-  col.accessor("views", { header: "views", size: 70, meta: { numeric: true } }),
+  col.accessor("category", { header: "게시판", size: 80 }),
+  col.accessor("views", { header: "조회수", size: 70, meta: { numeric: true } }),
   col.accessor((row) => row.good_vote - row.bad_vote, {
     id: "vote",
-    header: "vote",
+    header: "추천",
     size: 90,
     meta: { numeric: true },
     cell: (c) => `+${c.row.original.good_vote}/−${c.row.original.bad_vote}`,
   }),
-  col.accessor("comment_count", { header: "c", size: 50, meta: { numeric: true } }),
+  col.accessor("comment_count", { header: "댓글", size: 50, meta: { numeric: true } }),
 ];
 
 export default function PostsTable({ data }: { data: Post[] }) {
@@ -110,10 +110,12 @@ export default function PostsTable({ data }: { data: Post[] }) {
           {table.getHeaderGroups().map((hg) =>
             hg.headers.map((h) => {
               const elastic = h.column.id === "title";
+              const numeric = (h.column.columnDef.meta as { numeric?: boolean } | undefined)
+                ?.numeric;
               return (
                 <div
                   key={h.id}
-                  className={styles.headerCell}
+                  className={`${styles.headerCell} ${numeric ? styles.cellNum : ""}`}
                   style={
                     elastic
                       ? { flex: 1, minWidth: h.getSize() }

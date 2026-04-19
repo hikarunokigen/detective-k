@@ -14,7 +14,7 @@ export default async function Page() {
       </header>
 
       <div className={styles.tablesWrap}>
-        <div className={styles.userBadge}>684134 · 늑애</div>
+        <div className={styles.userBadge}>YGosu User id: 684134 | 늑애</div>
         <TableTabs posts={posts} comments={comments} />
       </div>
     </main>
