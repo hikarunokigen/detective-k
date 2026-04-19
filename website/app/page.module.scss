@@ -23,51 +23,11 @@ $link: #1a4b8c;
   margin: 0 auto;
 }
 
-.titleRow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.title {
-  margin: 0;
-  font-family: $mono;
-  font-size: 20px;
-  color: #111;
-}
-
 .userBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   font-family: $mono;
   font-size: 12px;
-  padding: 3px 10px;
-  background: #f2f2f2;
-  border: 1px solid #dcdcdc;
-  border-radius: 999px;
-  color: #333;
-}
-
-.userBadgeLabel {
-  color: #888;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.userBadgeId {
-  font-variant-numeric: tabular-nums;
-}
-
-.userBadgeSep {
-  color: #bbb;
-}
-
-.userBadgeNick {
-  color: #1a4b8c;
-  font-weight: 500;
+  color: #666;
+  margin-bottom: 6px;
 }
 
 .subtitle {

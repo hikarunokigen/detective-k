@@ -58,6 +58,7 @@ const columns = [
       return oneLine.length > 140 ? oneLine.slice(0, 140) + "…" : oneLine;
     },
   }),
+  col.accessor("nickname", { header: "nickname", size: 100 }),
   col.accessor("comment_datetime", {
     header: "when",
     size: 130,
