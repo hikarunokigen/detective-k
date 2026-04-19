@@ -27,6 +27,8 @@ export interface Post {
   post_body: string;
   good_vote: number;
   bad_vote: number;
+  nickname: string;
+  user_id: string;
   comments: PostComment[];
 }
 

@@ -139,6 +139,8 @@ async function scrapePostDetail(
   listing_datetime: string;
   good_vote: number;
   bad_vote: number;
+  nickname: string;
+  user_id: string;
   comments: PostComment[];
 }> {
   console.log(`[detail] ${url}`);
@@ -152,6 +154,19 @@ async function scrapePostDetail(
 
   const body = page.locator(".board_body .container").first();
   const postBody = (await body.count()) > 0 ? ((await body.innerText()) ?? "").trim() : "";
+
+  // Author nickname + user_id at the time of posting. Same onclick shape as
+  // the comment nicks (`show_nick_dropdown(..., 0, <user_id>, ...)`), so we
+  // reuse `extractUserId`.
+  const authorAnchor = page.locator("#contain_user_info .nickname a").first();
+  const nickname =
+    (await authorAnchor.count()) > 0
+      ? ((await authorAnchor.textContent()) ?? "").trim()
+      : "";
+  const user_id =
+    (await authorAnchor.count()) > 0
+      ? extractUserId((await authorAnchor.getAttribute("onclick")) ?? "")
+      : "";
 
   // `.right_etc div.date` text looks like "2026-04-14 21:49:21 (4일 전) / ".
   const dateLoc = page.locator(".right_etc div.date").first();
@@ -220,7 +235,16 @@ async function scrapePostDetail(
     });
   }
 
-  return { is_blinded, post_body: postBody, listing_datetime, good_vote, bad_vote, comments };
+  return {
+    is_blinded,
+    post_body: postBody,
+    listing_datetime,
+    good_vote,
+    bad_vote,
+    nickname,
+    user_id,
+    comments,
+  };
 }
 
 /**

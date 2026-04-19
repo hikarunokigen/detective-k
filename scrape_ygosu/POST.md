@@ -40,6 +40,8 @@ Now, if you go to the url of the post, e.g., https://ygosu.com/board/pan_monstar
 
 In this case, "1269094" is the "post id".
 
+In the post page, you can also check the nickname the author had at the time of writing the post. For instance, at https://ygosu.com/board/pan_monstarz/1269094, if you see the #contain_user_info and .nickname > a:nth-child(1), you can see that the nickname is "늑애".
+
 ## Contents of comment
 
 Underneath the page, there are comments.
@@ -71,6 +73,8 @@ interface Post {
   post_body: string;
   good_vote: number;
   bad_vote: number;
+  nickname: string;
+  user_id: string;
   comments: {
     user_id: string;
     nickname: string;
