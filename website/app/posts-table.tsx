@@ -51,8 +51,13 @@ const columns = [
   }),
   col.accessor("category", { header: "board", size: 80 }),
   col.accessor("views", { header: "views", size: 70, meta: { numeric: true } }),
-  col.accessor("good_vote", { header: "+", size: 50, meta: { numeric: true } }),
-  col.accessor("bad_vote", { header: "−", size: 50, meta: { numeric: true } }),
+  col.accessor((row) => row.good_vote - row.bad_vote, {
+    id: "vote",
+    header: "vote",
+    size: 90,
+    meta: { numeric: true },
+    cell: (c) => `+${c.row.original.good_vote}/−${c.row.original.bad_vote}`,
+  }),
   col.accessor("comment_count", { header: "c", size: 50, meta: { numeric: true } }),
 ];
 

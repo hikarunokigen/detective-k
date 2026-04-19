@@ -63,8 +63,13 @@ const columns = [
     size: 130,
     cell: (c) => formatWhen((c.getValue() as string) ?? ""),
   }),
-  col.accessor("vote_good", { header: "+", size: 50, meta: { numeric: true } }),
-  col.accessor("vote_bad", { header: "−", size: 50, meta: { numeric: true } }),
+  col.accessor((row) => row.vote_good - row.vote_bad, {
+    id: "vote",
+    header: "vote",
+    size: 90,
+    meta: { numeric: true },
+    cell: (c) => `+${c.row.original.vote_good}/−${c.row.original.vote_bad}`,
+  }),
 ];
 
 export default function CommentsTable({ data }: { data: Comment[] }) {
