@@ -9,7 +9,7 @@ import { chromium, type BrowserContext, type Page } from "playwright";
 const MEMBER_ID = "684134";
 
 const CONCURRENCY = 3;
-const MIN_JITTER_MS = 700;
+const MIN_JITTER_MS = 650;
 const MAX_JITTER_MS = 1800;
 
 const PAGE_COOLDOWN_MIN_MS = 2000;
@@ -21,6 +21,7 @@ const LISTING_URL = (page: number) =>
 interface Comment {
   user_id: string;
   nickname: string;
+  reply_nick: string | null;
   comment_body: string;
   vote_good: number;
   vote_bad: number;
@@ -193,7 +194,13 @@ async function scrapePostDetail(
       ? parseInt10((await postBadLoc.textContent()) ?? "")
       : 0;
 
-  const commentItems = page.locator("ul#reply_list_layer li.normal_reply");
+  // Top-level replies carry `normal_reply`; a reply-to-a-reply is
+  // `inner_reply` (same <ul>, sibling order preserved). Match both so nested
+  // replies land in the comments array right after the parent comment they
+  // belong to.
+  const commentItems = page.locator(
+    "ul#reply_list_layer li.normal_reply, ul#reply_list_layer li.inner_reply",
+  );
   const n = await commentItems.count();
   const comments: Comment[] = [];
   for (let i = 0; i < n; i++) {
@@ -204,6 +211,9 @@ async function scrapePostDetail(
     const voteWrap = item.locator("div.vote_wrap").first();
     const goodLoc = voteWrap.locator("[id$='_good']").first();
     const badLoc = voteWrap.locator("[id$='_bad']").first();
+    // `span.reply_nick` only appears on inner replies — it names the parent
+    // comment's author. Absent on top-level replies, so we default to null.
+    const replyNickLoc = item.locator("span.reply_nick").first();
 
     const nickname =
       (await nickLoc.count()) > 0 ? ((await nickLoc.textContent()) ?? "").trim() : "";
@@ -216,10 +226,15 @@ async function scrapePostDetail(
     const voteGood =
       (await goodLoc.count()) > 0 ? parseInt10((await goodLoc.textContent()) ?? "") : 0;
     const voteBad = (await badLoc.count()) > 0 ? parseInt10((await badLoc.textContent()) ?? "") : 0;
+    const replyNick =
+      (await replyNickLoc.count()) > 0
+        ? ((await replyNickLoc.textContent()) ?? "").trim() || null
+        : null;
 
     comments.push({
       user_id: userId,
       nickname,
+      reply_nick: replyNick,
       comment_body: commentBody,
       vote_good: voteGood,
       vote_bad: voteBad,
@@ -269,9 +284,7 @@ async function scrapePage(
   }
 
   const detailPages = await Promise.all(
-    Array.from({ length: Math.min(CONCURRENCY, summaries.length) }, () =>
-      context.newPage(),
-    ),
+    Array.from({ length: Math.min(CONCURRENCY, summaries.length) }, () => context.newPage()),
   );
 
   try {

@@ -70,6 +70,7 @@ interface Post {
   comments: {
     user_id: string;
     nickname: string;
+    reply_nick: string | null;
     comment_body: string;
     vote_good: number;
     vote_bad: number;
