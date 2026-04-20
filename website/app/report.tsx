@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 
 import styles from "./report.module.scss";
 
-const REPORT_PATH = join(process.cwd(), "..", "analytics", "REPORT_v5.md");
+const REPORT_PATH = join(process.cwd(), "..", "analytics", "publish_v1.md");
 
 export default async function Report() {
   const md = await readFile(REPORT_PATH, "utf8");
