@@ -14,18 +14,6 @@ $bg-soft: #f7f7f7;
   border-radius: 6px;
   background: #fff;
 
-  &[open] .summary {
-    border-bottom: 1px solid $border;
-  }
-
-  &[open] .summaryHint::before {
-    content: "접기";
-  }
-
-  &:not([open]) .summaryHint::before {
-    content: "펼치기";
-  }
-
   h1 {
     font-size: 22px;
     font-weight: 700;
@@ -154,15 +142,29 @@ $bg-soft: #f7f7f7;
   }
 }
 
+.body {
+  padding: 4px 20px 20px;
+
+  > :first-child {
+    margin-top: 8px;
+  }
+}
+
+.fold {
+  position: relative;
+}
+
 .summary {
   list-style: none;
   cursor: pointer;
-  padding: 12px 16px;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: $link;
   user-select: none;
+  border-top: 1px solid $border;
+  background: #fafbfc;
 
   &::-webkit-details-marker {
     display: none;
@@ -178,26 +180,11 @@ $bg-soft: #f7f7f7;
   }
 }
 
-.summaryTitle {
-  font-size: 17px;
-  font-weight: 700;
-  color: #111;
+.summaryLabel::before {
+  // Text content is controlled by open state so CSS owns the toggle label.
+  content: "전체 보고서 보기  ▼";
 }
 
-.summaryHint {
-  font-size: 12px;
-  color: $muted;
-  font-weight: 400;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.body {
-  padding: 4px 20px 20px;
-
-  // Tighten the top margin on the first child so the body doesn't feel
-  // detached from the summary after expansion.
-  > :first-child {
-    margin-top: 8px;
-  }
+.fold[open] .summaryLabel::before {
+  content: "접기  ▲";
 }
