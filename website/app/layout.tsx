@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import "./globals.scss";
 
 export const metadata = {
-  title: "detective_k",
+  title: "detective",
   description: "ygosu sleuthing",
 };
 

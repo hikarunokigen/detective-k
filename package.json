@@ -1,5 +1,5 @@
 {
-  "name": "detective_k",
+  "name": "detective",
   "private": true,
   "packageManager": "pnpm@10.33.0",
   "scripts": {
