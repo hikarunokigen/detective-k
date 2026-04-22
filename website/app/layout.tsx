@@ -6,8 +6,8 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.scss";
 
 export const metadata = {
-  title: "사이버범죄 조사",
-  description: "사이버범죄 조사",
+  title: "케이 커뮤니티 사이버 범죄 조사",
+  description: "케이 커뮤니티 사이버 범죄 조사",
 };
 
 export const viewport: Viewport = {

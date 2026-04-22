@@ -9,18 +9,12 @@ import type { Comment, Post } from "ygosu_types";
 
 type TabId = "posts" | "comments";
 
-export default function TableTabs({
-  posts,
-  comments,
-}: {
-  posts: Post[];
-  comments: Comment[];
-}) {
+export default function TableTabs({ posts, comments }: { posts: Post[]; comments: Comment[] }) {
   const [active, setActive] = useState<TabId>("posts");
   const baseId = useId();
   const tabs: { id: TabId; label: string; count: number }[] = [
-    { id: "posts", label: "posts", count: posts.length },
-    { id: "comments", label: "comments", count: comments.length },
+    { id: "posts", label: "글", count: posts.length },
+    { id: "comments", label: "댓글", count: comments.length },
   ];
 
   return (
@@ -51,11 +45,7 @@ export default function TableTabs({
         id={`${baseId}-panel-${active}`}
         aria-labelledby={`${baseId}-tab-${active}`}
       >
-        {active === "posts" ? (
-          <PostsTable data={posts} />
-        ) : (
-          <CommentsTable data={comments} />
-        )}
+        {active === "posts" ? <PostsTable data={posts} /> : <CommentsTable data={comments} />}
       </div>
     </div>
   );
