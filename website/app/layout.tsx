@@ -1,6 +1,8 @@
 import type { Viewport } from "next";
 import type { ReactNode } from "react";
 
+import { Analytics } from "@vercel/analytics/next";
+
 import "./globals.scss";
 
 export const metadata = {
@@ -18,11 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en" style={{ colorScheme: "light" }}>
       <body>
         {children}
-        <script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token":"61bae24806ed4417be1af44bb9334d56"}'
-        />
+        <Analytics />
       </body>
     </html>
   );
