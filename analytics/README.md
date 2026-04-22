@@ -38,7 +38,7 @@ Game developed by Blizzard. There are 3 tribes in the game: Zerg, Protoss, Terra
 - 늑대채린, 4, zerg
 - 구루미, 4, zerg
 - 링고, 4, protoss
-- 내가먼지, 6, terran
+- 내가먼지, 5, terran
 - 정서린, 6, protoss
 - 박하악, 6, zerg
 - 냥수디, 7, zerg
