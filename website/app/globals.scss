@@ -12,10 +12,11 @@ body {
 
 body {
   font-family:
+    var(--font-roboto),
+    var(--font-noto-sans-kr),
     system-ui,
     -apple-system,
     "Segoe UI",
-    Roboto,
     "Helvetica Neue",
     Arial,
     sans-serif;
